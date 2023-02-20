@@ -1,0 +1,8 @@
+package com.redisexample.service;
+
+import com.redisexample.model.Student;
+
+public class StudentService {
+
+	Student student = new Student();
+}

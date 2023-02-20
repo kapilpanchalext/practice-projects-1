@@ -1,0 +1,26 @@
+package com.redisexample.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.redisexample.model.Student;
+import com.redisexample.model.Student.Gender;
+import com.redisexample.repository.StudentRepository;
+
+@Configuration
+public class StudentConfig {
+
+	@Autowired
+	private StudentRepository studentRepository;	
+	
+    @Bean
+    CommandLineRunner runner (){
+        return args -> {
+        	System.err.println("COMMAND LINE RUNNER");
+//			Student student = new Student("Eng2015001", "John Doe", Gender.MALE);
+//			studentRepository.saveAndFlush(student);
+		};
+	}
+}

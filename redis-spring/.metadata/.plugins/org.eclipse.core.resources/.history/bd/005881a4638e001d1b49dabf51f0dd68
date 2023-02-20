@@ -1,0 +1,28 @@
+package com.redisexample.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.redisexample.model.Student;
+import com.redisexample.repository.StudentRepository;
+
+@Configuration
+public class StudentConfig {
+
+	@Autowired
+	private StudentRepository studentRepository;	
+	
+    @Bean
+    CommandLineRunner runner (){
+        return args -> {
+			Student student = new Student("John Doe");
+			System.err.println("SAVED STUDENT: " + student);
+			studentRepository.save(student);
+			
+			Student retrievedStudent = studentRepository.findById(1L).get();
+			System.err.println("RETRIEVED STUDENT: " + retrievedStudent);
+		};
+	}
+}

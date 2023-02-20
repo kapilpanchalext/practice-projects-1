@@ -1,0 +1,17 @@
+server:
+  port: 9001
+  
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/departmentService
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update      
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    generate-ddl: true

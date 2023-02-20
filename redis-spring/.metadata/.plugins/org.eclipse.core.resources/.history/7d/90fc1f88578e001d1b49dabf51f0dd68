@@ -1,0 +1,5 @@
+package com.redisexample.repository;
+
+public interface StudentRepository {
+
+}

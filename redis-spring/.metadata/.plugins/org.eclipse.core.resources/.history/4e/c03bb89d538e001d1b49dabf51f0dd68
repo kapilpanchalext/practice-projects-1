@@ -1,0 +1,5 @@
+package com.redisexample.config;
+
+public class RedisConfig {
+
+}

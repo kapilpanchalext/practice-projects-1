@@ -1,0 +1,21 @@
+package com.redisexample.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.redisexample.model.Student;
+import com.redisexample.model.Student.Gender;
+import com.redisexample.repository.StudentRepository;
+
+@Service
+public class StudentService {
+
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	
+	public void saveStudent() {
+		Student student = new Student("Eng2015001", "John Doe", Gender.MALE);
+		studentRepository.saveAndFlush(student);
+	}	
+}

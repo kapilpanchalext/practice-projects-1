@@ -1,0 +1,56 @@
+package com.redisexample.model;
+
+import java.io.Serializable;
+import java.util.UUID;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.redis.core.RedisHash;
+
+@RedisHash("Student")
+@Entity(name = "Student")
+@Table(name = "student",
+		catalog = "MYDB",
+		schema = "PUBLIC")
+public class Student implements Serializable{
+	
+	public enum Gender {
+		MALE,
+		FEMALE
+	}
+	
+	@Id
+    @GeneratedValue(generator = "redis_uuid2")
+    @GenericGenerator(name = "redis_uuid2", strategy = "uuid2")
+	private UUID id;
+	private String name;
+	private Gender gender;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Gender getGender() {
+		return gender;
+	}
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+	public Student(String name, Gender gender) {
+		this.name = name;
+		this.gender = gender;
+	}
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", name=" + name + ", gender=" + gender + "]";
+	}	
+}

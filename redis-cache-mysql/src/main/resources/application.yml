@@ -1,0 +1,63 @@
+server:
+  port: 9003
+  
+spring:  
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+      
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+  
+  datasource:
+    url: jdbc:mysql://localhost:3306/rediscache?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update      
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        format_sql: true
+    generate-ddl: true
+    
+    
+##management endpoints on a separate port
+#management:
+#  port: 8091
+#  security:
+#    enabled: false # management port is internal only. no need to secure it.
+
+
+
+
+  # ===============================
+  # = Redis configurations
+  # ===============================ß
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    pool:
+      max-active: 5
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    timeout: 3000
+
+#logging:
+#  pattern:
+#    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %highlight(%-5level) %logger{36}.%M - %msg%n"
+#    file: "%d %-5level [%thread] %logger{0} : %msg%n"
+#  level:
+#    root: WARN
+#    com.irsyad.springmysqlredis: DEBUG
+#    org.springframework.web: INFO
+#    org.springframework.security: INFO
+#    org:
+#      hibernate.SQL: DEBUG
+#      hibernate.type.descriptor.sql.BasicBinder: TRACE

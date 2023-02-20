@@ -1,0 +1,12 @@
+package com.redisexample.config;
+
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
+
+public class RedisConfig {
+	
+	@Bean
+	JedisConnectionFactory jedisConnectionFactory() {
+		
+	}
+
+}

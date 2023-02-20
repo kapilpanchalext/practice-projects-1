@@ -1,0 +1,15 @@
+package com.redisexample.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.redisexample.model.Student;
+import com.redisexample.model.Student.Gender;
+import com.redisexample.repository.StudentRepository;
+
+public class StudentService {
+
+	@Autowired
+	private StudentRepository studentRepository;
+	
+	Student student = new Student("Eng2015001", "John Doe", Gender.MALE);	
+}

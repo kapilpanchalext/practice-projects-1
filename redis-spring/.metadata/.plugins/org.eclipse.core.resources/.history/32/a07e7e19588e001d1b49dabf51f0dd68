@@ -1,0 +1,9 @@
+package com.redisexample.service;
+
+import com.redisexample.model.Student;
+import com.redisexample.model.Student.Gender;
+
+public class StudentService {
+
+	Student student = new Student("Eng2015001", "John Doe", Gender.MALE);
+}
