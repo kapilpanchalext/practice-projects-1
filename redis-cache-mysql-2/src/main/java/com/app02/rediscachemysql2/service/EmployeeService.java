@@ -1,5 +1,7 @@
 package com.app02.rediscachemysql2.service;
 
+//https://github.com/r4lly99/spring-mysql-redis/blob/main/src/main/java/com/irsyad/springmysqlredis/service/impl/EmployeeServiceImpl.java
+
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
