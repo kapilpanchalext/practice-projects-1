@@ -1,4 +1,4 @@
-package com.app05.main.api;
+package com.app05.userserviceredis.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,24 +8,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app05.main.VO.ResponseTemplateVO;
-import com.app05.main.model.MainData;
-import com.app05.main.service.MainService;
+import com.app05.userserviceredis.model.UserDetails;
+import com.app05.userserviceredis.service.UserService;
 
 @RestController
 @RequestMapping(path = "/api/v1")
-public class MainController {
+public class UserController {
 
 	@Autowired
-	private MainService service;
+	private UserService service;
 	
 	@PostMapping(path = "/")
-	public MainData saveMainData(@RequestBody MainData data) {	
-		return service.saveMainData(data);
+	public UserDetails saveUser(@RequestBody UserDetails userDetails) {
+		return service.saveUser(userDetails);
 	}
 	
-	@GetMapping(path = "/get-main-id/{mainId}")
-	public ResponseTemplateVO getMainDataById(@PathVariable(name = "mainId") Long mainId) {
-		return service.getMainDataById(mainId);		
+	@GetMapping(path = "/get-user/{userId}")
+	public UserDetails getUserDetailsById(@PathVariable(name = "userId") Long userId) {
+		return service.getUserDetailsById(userId);
 	}
 }
