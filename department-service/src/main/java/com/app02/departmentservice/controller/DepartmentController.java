@@ -1,5 +1,7 @@
 package com.app02.departmentservice.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,5 +29,10 @@ public class DepartmentController {
 	@GetMapping(path = "/{id}")
 	public Department findDepartmentById(@PathVariable("id") Long departmentId) {
 		return departmentService.findDepartmentById(departmentId);
+	}
+	
+	@GetMapping(path = "/get-all-departments")
+	public List<Department> getAllDepartments(){
+		return departmentService.getAllDepartments();
 	}
 }

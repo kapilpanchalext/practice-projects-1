@@ -24,7 +24,7 @@ public class EmployeeService {
 	private EmployeeRepository repo;
 	
 	@Autowired
-	private RedisTemplate<String, Object> redisTemplate;
+	private RedisTemplate<String, Employee> redisTemplate;
 
 	public boolean saveEmployee(Employee employee) {
 		repo.save(employee);
@@ -52,7 +52,7 @@ public class EmployeeService {
 	public Employee getEmployeeById(Long id) {
 		
 		var key = "emp_" + id;
-        final ValueOperations<String, Object> operations = redisTemplate.opsForValue();
+        final ValueOperations<String, Employee> operations = redisTemplate.opsForValue();
         final boolean hasKey = redisTemplate.hasKey(key);
         if (hasKey) {
             final Employee post = (Employee) operations.get(key);
@@ -60,8 +60,9 @@ public class EmployeeService {
             return post;
         }
         final Optional<Employee> employee = repo.findById(id);
+        System.err.println("EMPLOYEE: " + employee.get());
         if(employee.isPresent()) {
-            operations.set(key, employee.get(), 10, TimeUnit.SECONDS);
+            operations.set(key, employee.get(), 10, TimeUnit.DAYS);
             System.err.println("EmployeeServiceImpl.findEmployeeById() : cache insert >> " + employee.get().toString());
             return employee.get();
         } else {

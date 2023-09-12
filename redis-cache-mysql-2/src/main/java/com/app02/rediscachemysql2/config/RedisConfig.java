@@ -13,6 +13,8 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
+import com.app02.rediscachemysql2.model.Employee;
+
 import io.lettuce.core.ClientOptions;
 
 @Configuration
@@ -31,7 +33,7 @@ public class RedisConfig extends CachingConfigurerSupport{
     private int maxPool;
 
     @Bean
-    public LettuceConnectionFactory redisConnectionFactory() {
+    LettuceConnectionFactory redisConnectionFactory() {
     	
     	System.err.println("REDIS HOST: " + redisHost);
     	System.err.println("REDIS PORT: " + redisPort);
@@ -56,8 +58,8 @@ public class RedisConfig extends CachingConfigurerSupport{
     }
     
     @Bean(name = "redisTemplate")
-    public RedisTemplate<String, Object> redisTemplate() {
-        final RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
+    RedisTemplate<String, Employee> redisTemplate() {
+        final RedisTemplate<String, Employee> redisTemplate = new RedisTemplate<>();
         
         redisTemplate.setConnectionFactory(redisConnectionFactory()); //redisConnectionFactory() //connectionFactory()
         redisTemplate.setEnableTransactionSupport(true);
