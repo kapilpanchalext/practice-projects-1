@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tmwo0EbpEe6ARNXny0MQ6w" name="Use_Case_1_New_Badge_issued">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_tqwYAEbpEe6ARNXny0MQ6w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_wr9fMEbpEe6ARNXny0MQ6w" name="useCase2">
+    <packagedElement xmi:type="uml:Package" xmi:id="_LvGVYEbqEe6ARNXny0MQ6w" name="EarnedBadge">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_2HRRUEbpEe6ARNXny0MQ6w" name="Earned Badge" visibility="private"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_k9U4YEbqEe6ARNXny0MQ6w" name="Claimed Badge" visibility="private"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DT4nIEbrEe6ARNXny0MQ6w" name="&lt;&lt;dependency>>" client="_k9U4YEbqEe6ARNXny0MQ6w" supplier="_2HRRUEbpEe6ARNXny0MQ6w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_vKS4IEbpEe6ARNXny0MQ6w" name="user"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_SJsk0EbrEe6ARNXny0MQ6w" name="StateMachine4"/>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_ShuqUEbrEe6ARNXny0MQ6w" name="StateMachine5"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_cAjKoEbqEe6ARNXny0MQ6w" name="onClick(leftSidebarIcon)" memberEnd="_cAjxskbqEe6ARNXny0MQ6w _cAjxs0bqEe6ARNXny0MQ6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cAjxsEbqEe6ARNXny0MQ6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cAjxsUbqEe6ARNXny0MQ6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cAjxskbqEe6ARNXny0MQ6w" name="earned badge" type="_2HRRUEbpEe6ARNXny0MQ6w" association="_cAjKoEbqEe6ARNXny0MQ6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_cAjxs0bqEe6ARNXny0MQ6w" name="user" type="_vKS4IEbpEe6ARNXny0MQ6w" association="_cAjKoEbqEe6ARNXny0MQ6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_LenXcEbsEe6ARNXny0MQ6w" name="useCase3">
+    <packagedElement xmi:type="uml:Package" xmi:id="_UQYvEEbsEe6ARNXny0MQ6w" name="claimedBadge">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ZPRq8EbsEe6ARNXny0MQ6w" name="Claimed Badge"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_n09h8EbsEe6ARNXny0MQ6w" name="Revoked Badge"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_ybXf8EbsEe6ARNXny0MQ6w" name="&lt;&lt;dependency>>" client="_n09h8EbsEe6ARNXny0MQ6w" supplier="_ZPRq8EbsEe6ARNXny0MQ6w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_coUqYEbsEe6ARNXny0MQ6w" name="user"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fEGwUEbsEe6ARNXny0MQ6w" name="onClick(Claim)" memberEnd="_fEHXYkbsEe6ARNXny0MQ6w _fEHXY0bsEe6ARNXny0MQ6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fEHXYEbsEe6ARNXny0MQ6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fEHXYUbsEe6ARNXny0MQ6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fEHXYkbsEe6ARNXny0MQ6w" name="claimed badge" type="_ZPRq8EbsEe6ARNXny0MQ6w" association="_fEGwUEbsEe6ARNXny0MQ6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fEHXY0bsEe6ARNXny0MQ6w" name="actor2" type="_coUqYEbsEe6ARNXny0MQ6w" association="_fEGwUEbsEe6ARNXny0MQ6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3csr0EbsEe6ARNXny0MQ6w" name="onClick(Revoke)" memberEnd="_3ctS4EbsEe6ARNXny0MQ6w _3ctS4UbsEe6ARNXny0MQ6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3csr0UbsEe6ARNXny0MQ6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3csr0kbsEe6ARNXny0MQ6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3ctS4EbsEe6ARNXny0MQ6w" name="actor2" type="_coUqYEbsEe6ARNXny0MQ6w" association="_3csr0EbsEe6ARNXny0MQ6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3ctS4UbsEe6ARNXny0MQ6w" name="revokedbadge" type="_n09h8EbsEe6ARNXny0MQ6w" association="_3csr0EbsEe6ARNXny0MQ6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_3iHscEbuEe6ARNXny0MQ6w" name="useCase1">
+    <packagedElement xmi:type="uml:Package" xmi:id="_6ErIwEbuEe6ARNXny0MQ6w" name="newBadgeIssued">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_K6gdcEbvEe6ARNXny0MQ6w" name="EarnedBadge"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_Og1q8EbvEe6ARNXny0MQ6w" name="System Admin"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_QksZEEbvEe6ARNXny0MQ6w" name="&lt;&lt;issues>> API without UI" memberEnd="_QktAIkbvEe6ARNXny0MQ6w _QktAI0bvEe6ARNXny0MQ6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_QktAIEbvEe6ARNXny0MQ6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_QktAIUbvEe6ARNXny0MQ6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QktAIkbvEe6ARNXny0MQ6w" name="earnedbadge" type="_K6gdcEbvEe6ARNXny0MQ6w" association="_QksZEEbvEe6ARNXny0MQ6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_QktAI0bvEe6ARNXny0MQ6w" name="system admin" type="_Og1q8EbvEe6ARNXny0MQ6w" association="_QksZEEbvEe6ARNXny0MQ6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_84zAwEbvEe6ARNXny0MQ6w" name="useCase4">
+    <packagedElement xmi:type="uml:Package" xmi:id="_BOl8UEbwEe6ARNXny0MQ6w" name="revokedBadge">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_Fxb1YEbwEe6ARNXny0MQ6w" name="Revoked Badge"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_IHgU4EbwEe6ARNXny0MQ6w" name="Actor2"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_WDiK4EbwEe6ARNXny0MQ6w" name="Claimed Badge"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_dOdggEbwEe6ARNXny0MQ6w" name="&lt;&lt;dependency>>" client="_WDiK4EbwEe6ARNXny0MQ6w" supplier="_Fxb1YEbwEe6ARNXny0MQ6w"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_LKN38EbwEe6ARNXny0MQ6w" name="user"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_M01msEbwEe6ARNXny0MQ6w" name="onClick(reclaim)" memberEnd="_M01ms0bwEe6ARNXny0MQ6w _M01mtEbwEe6ARNXny0MQ6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_M01msUbwEe6ARNXny0MQ6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_M01mskbwEe6ARNXny0MQ6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_M01ms0bwEe6ARNXny0MQ6w" name="revoked badge" type="_Fxb1YEbwEe6ARNXny0MQ6w" association="_M01msEbwEe6ARNXny0MQ6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_M01mtEbwEe6ARNXny0MQ6w" name="user" type="_LKN38EbwEe6ARNXny0MQ6w" association="_M01msEbwEe6ARNXny0MQ6w"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_uCbM8EbwEe6ARNXny0MQ6w" name="useCase5">
+    <packagedElement xmi:type="uml:Package" xmi:id="_0SxwsEbwEe6ARNXny0MQ6w" name="lockedBadge">
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_392UQEbwEe6ARNXny0MQ6w" name="Locked Badge"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Actor" xmi:id="_5fH5wEbwEe6ARNXny0MQ6w" name="System Admin"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_6Y1wAEbwEe6ARNXny0MQ6w" name="locks" memberEnd="_6Y2XEkbwEe6ARNXny0MQ6w _6Y2XE0bwEe6ARNXny0MQ6w">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_6Y2XEEbwEe6ARNXny0MQ6w" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_6Y2XEUbwEe6ARNXny0MQ6w" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6Y2XEkbwEe6ARNXny0MQ6w" name="locked badge" type="_392UQEbwEe6ARNXny0MQ6w" association="_6Y1wAEbwEe6ARNXny0MQ6w"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_6Y2XE0bwEe6ARNXny0MQ6w" name="actor2" type="_5fH5wEbwEe6ARNXny0MQ6w" association="_6Y1wAEbwEe6ARNXny0MQ6w"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+          border: 1px solid black;
+        }
+      </style>
+
+</head>
+
+<body>
+    <canvas id="canvas" width="150" height="150">Canvas</canvas>
+</body>
+
+<script>
+    function draw() {
+        const ctx = document.getElementById("canvas").getContext("2d");
+      
+        // Draw guides
+        ctx.strokeStyle = "#09f";
+        ctx.beginPath();
+        ctx.moveTo(10, 10);
+        ctx.lineTo(140, 10);
+        ctx.moveTo(10, 140);
+        ctx.lineTo(140, 140);
+        ctx.stroke();
+      
+        // Draw lines
+        ctx.strokeStyle = "black";
+        ["butt", "round", "square"].forEach((lineCap, i) => {
+          ctx.lineWidth = 15;
+          ctx.lineCap = lineCap;
+          ctx.beginPath();
+          ctx.moveTo(25 + i * 50, 10);
+          ctx.lineTo(25 + i * 50, 140);
+          ctx.stroke();
+        });
+      }
+    draw();
+</script>
+
+</html>

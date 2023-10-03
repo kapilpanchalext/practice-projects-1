@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-tomcat-max-connections-docker-2-app-container
+spec:
+  selector:
+    run: spring-tomcat-max-connections-docker-2-app-container  # Update the label to match your pod
+  ports:
+  - protocol: TCP
+    port: 9001
+    targetPort: 9001  # Assuming your Spring Boot app listens on port 9001

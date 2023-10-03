@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_KfE3cFHsEe6-SJ2VOpFKQQ" name="architecture-badge-details-redis-1">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_KjrDkFHsEe6-SJ2VOpFKQQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_KgXQ4FHsEe6-SJ2VOpFKQQ" name="badgesDetailsInteraction" visibility="public" node="_M3I7AFHsEe6-SJ2VOpFKQQ _pjCpUFHtEe6-SJ2VOpFKQQ _uX44YFHtEe6-SJ2VOpFKQQ _wTPKwFHtEe6-SJ2VOpFKQQ _kImkcFHuEe6-SJ2VOpFKQQ _lmSDYFHuEe6-SJ2VOpFKQQ _IOr3QFHuEe6-SJ2VOpFKQQ">
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_y-_b0FHsEe6-SJ2VOpFKQQ" name="badgesDetailsClickHandler">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_y_DGMFHsEe6-SJ2VOpFKQQ" name="InteractionUse_badgesDetailsClickHandler" refersTo="_y-_b0FHsEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_henf4FHtEe6-SJ2VOpFKQQ" name="Interaction3">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_heoG8FHtEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction3" refersTo="_henf4FHtEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_ulZI4FHtEe6-SJ2VOpFKQQ" name="Interaction5">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_ulZv8FHtEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction5" refersTo="_ulZI4FHtEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_wgYO4FHtEe6-SJ2VOpFKQQ" name="Interaction7">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_wgY18FHtEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction7" refersTo="_wgYO4FHtEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_PfYdsFHuEe6-SJ2VOpFKQQ" name="Interaction13">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_PfZEwFHuEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction13" refersTo="_PfYdsFHuEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_X2f5oFHuEe6-SJ2VOpFKQQ" name="Interaction16">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_X2ggsFHuEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction16" refersTo="_X2f5oFHuEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_dm_4oFHuEe6-SJ2VOpFKQQ" name="Interaction17">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_dm_4oVHuEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction17" refersTo="_dm_4oFHuEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_kcw2kFHuEe6-SJ2VOpFKQQ" name="Interaction18">
+      <fragment xmi:type="uml:InteractionUse" xmi:id="_kcxdoFHuEe6-SJ2VOpFKQQ" name="InteractionUse_Interaction18" refersTo="_kcw2kFHuEe6-SJ2VOpFKQQ"/>
+    </ownedBehavior>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_xgFYYFHtEe6-SJ2VOpFKQQ" target="_uX44YFHtEe6-SJ2VOpFKQQ" source="_pjCpUFHtEe6-SJ2VOpFKQQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_yFsm4FHtEe6-SJ2VOpFKQQ" target="_wTPKwFHtEe6-SJ2VOpFKQQ" source="_pjCpUFHtEe6-SJ2VOpFKQQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ysVJEFHtEe6-SJ2VOpFKQQ" target="_pjCpUFHtEe6-SJ2VOpFKQQ" source="_M3I7AFHsEe6-SJ2VOpFKQQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_QL17EFHuEe6-SJ2VOpFKQQ" target="_IOr3QFHuEe6-SJ2VOpFKQQ" source="_uX44YFHtEe6-SJ2VOpFKQQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_RDgi4FHuEe6-SJ2VOpFKQQ" target="_IOr3QFHuEe6-SJ2VOpFKQQ" source="_wTPKwFHtEe6-SJ2VOpFKQQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_mYWZgFHuEe6-SJ2VOpFKQQ" target="_lmSDYFHuEe6-SJ2VOpFKQQ" source="_kImkcFHuEe6-SJ2VOpFKQQ"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_oMJ5cFHuEe6-SJ2VOpFKQQ" target="_kImkcFHuEe6-SJ2VOpFKQQ" source="_IOr3QFHuEe6-SJ2VOpFKQQ"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_M3I7AFHsEe6-SJ2VOpFKQQ" name="leftSideBar-badgesClickHandler" outgoing="_ysVJEFHtEe6-SJ2VOpFKQQ"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_pjCpUFHtEe6-SJ2VOpFKQQ" incoming="_ysVJEFHtEe6-SJ2VOpFKQQ" outgoing="_xgFYYFHtEe6-SJ2VOpFKQQ _yFsm4FHtEe6-SJ2VOpFKQQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_uX44YFHtEe6-SJ2VOpFKQQ" name="CLAIMED TAB (UI) (onClickBadge)" incoming="_xgFYYFHtEe6-SJ2VOpFKQQ" outgoing="_QL17EFHuEe6-SJ2VOpFKQQ" behavior="_ulZI4FHtEe6-SJ2VOpFKQQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ulyKclHtEe6-SJ2VOpFKQQ" source="org.eclipse.papyrus.uml.diagram.interactionoverview.callbehavioraction">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ulyKc1HtEe6-SJ2VOpFKQQ" key="type" value="use"/>
+      </eAnnotations>
+    </node>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_wTPKwFHtEe6-SJ2VOpFKQQ" name="REVOKED TAB (UI) (onClickReclaim)" incoming="_yFsm4FHtEe6-SJ2VOpFKQQ" outgoing="_RDgi4FHuEe6-SJ2VOpFKQQ" behavior="_wgYO4FHtEe6-SJ2VOpFKQQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wg1h4FHtEe6-SJ2VOpFKQQ" source="org.eclipse.papyrus.uml.diagram.interactionoverview.callbehavioraction">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wg1h4VHtEe6-SJ2VOpFKQQ" key="type" value="use"/>
+      </eAnnotations>
+    </node>
+    <node xmi:type="uml:JoinNode" xmi:id="_IOr3QFHuEe6-SJ2VOpFKQQ" incoming="_QL17EFHuEe6-SJ2VOpFKQQ _RDgi4FHuEe6-SJ2VOpFKQQ" outgoing="_oMJ5cFHuEe6-SJ2VOpFKQQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="_kImkcFHuEe6-SJ2VOpFKQQ" name="/student/badgeDetails" incoming="_oMJ5cFHuEe6-SJ2VOpFKQQ" outgoing="_mYWZgFHuEe6-SJ2VOpFKQQ" behavior="_kcw2kFHuEe6-SJ2VOpFKQQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_kdHb4lHuEe6-SJ2VOpFKQQ" source="org.eclipse.papyrus.uml.diagram.interactionoverview.callbehavioraction">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_kdHb41HuEe6-SJ2VOpFKQQ" key="type" value="use"/>
+      </eAnnotations>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_lmSDYFHuEe6-SJ2VOpFKQQ" name="end" incoming="_mYWZgFHuEe6-SJ2VOpFKQQ"/>
+  </packagedElement>
+</uml:Model>

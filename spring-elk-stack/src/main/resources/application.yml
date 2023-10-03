@@ -1,0 +1,10 @@
+server:
+  port: 9003
+  
+spring:
+  application:
+    name: ELK-STACK-EXAMPLE
+    
+logging:
+  file: 
+    name: C:/Users/kapil.panchal.ext/Desktop/logs/elk-stack.log

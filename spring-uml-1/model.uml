@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_xR9_IEfBEe6CXZeqz2Aezw" name="modelClassDiagram">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_xT-KQEfBEe6CXZeqz2Aezw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_4THtsEfBEe6CXZeqz2Aezw" name="claimedBadgeArchitecture">
+    <packagedElement xmi:type="uml:Class" xmi:id="_DNSVMEfCEe6CXZeqz2Aezw" name="HomeController.class"/>
+  </packagedElement>
+</uml:Model>

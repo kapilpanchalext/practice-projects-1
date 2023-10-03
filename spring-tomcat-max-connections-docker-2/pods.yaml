@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-tomcat-max-connections-docker-2-app
+spec:
+  replicas: 5  # You can adjust the number of replicas as needed
+  selector:
+    matchLabels:
+      app: spring-tomcat-max-connections-docker-2-app
+  template:
+    metadata:
+      labels:
+        app: spring-tomcat-max-connections-docker-2-app
+    spec:
+      containers:
+      - name: spring-tomcat-max-connections-docker-2-app-container
+        image: docker.io/kapilpanchalextnmimsedu/spring-tomcat-connections:latest # docker.io/library/spring-tomcat-max-connections-docker-2-app:latest        
+        imagePullPolicy: Always
+      imagePullSecrets:
+      - name: regcred

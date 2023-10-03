@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:OpenBadgesBean="http:///schemas/OpenBadgesBean/_JLbg0kiBEe6jKfRrnd84zw/0" xmlns:api="http:///schemas/api/_o3dYQEiCEe6jKfRrnd84zw/0" xmlns:bean="http:///schemas/bean/_XIiFAEyLEe6R4OvAgUuccg/0" xmlns:controller="http:///schemas/controller/_TfGr4UiIEe6jKfRrnd84zw/0" xmlns:dao="http:///schemas/dao/_AaVP4EiHEe6jKfRrnd84zw/0" xmlns:dao_1="http:///schemas/dao/_E56SM0iKEe6jKfRrnd84zw/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:event="http:///schemas/event/_geSt4EiCEe6jKfRrnd84zw/0" xmlns:event_1="http:///schemas/event/_nP_OsUiDEe6jKfRrnd84zw/3" xmlns:event_2="http:///schemas/event/_G0vZcEiFEe6jKfRrnd84zw/4" xmlns:event_3="http:///schemas/event/_HiUe4EiKEe6jKfRrnd84zw/5" xmlns:event_4="http:///schemas/event/_JvhWQEiKEe6jKfRrnd84zw/6" xmlns:repository="http:///schemas/repository/_MOiWYkiKEe6jKfRrnd84zw/0" xmlns:service="http:///schemas/service/_CwnDYUiKEe6jKfRrnd84zw/1" xmlns:studentPortal="http:///schemas/studentPortal/_wsfXoEh-Ee6jKfRrnd84zw/0" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/OpenBadgesBean/_JLbg0kiBEe6jKfRrnd84zw/0 OpenBadgesBean.profile.uml#_JLcH4UiBEe6jKfRrnd84zw http:///schemas/api/_o3dYQEiCEe6jKfRrnd84zw/0 api.profile.uml#_o3dYQkiCEe6jKfRrnd84zw http:///schemas/bean/_XIiFAEyLEe6R4OvAgUuccg/0 bean.profile.uml#_XIisEUyLEe6R4OvAgUuccg http:///schemas/controller/_TfGr4UiIEe6jKfRrnd84zw/0 controller.profile.uml#_TfGr40iIEe6jKfRrnd84zw http:///schemas/dao/_AaVP4EiHEe6jKfRrnd84zw/0 dao.profile.uml#_AaVP4kiHEe6jKfRrnd84zw http:///schemas/dao/_E56SM0iKEe6jKfRrnd84zw/1 dao.profile.uml#_E56SNEiKEe6jKfRrnd84zw http:///schemas/event/_geSt4EiCEe6jKfRrnd84zw/0 event.profile.uml#_geSt4kiCEe6jKfRrnd84zw http:///schemas/event/_nP_OsUiDEe6jKfRrnd84zw/3 event.profile.uml#_nP_1wEiDEe6jKfRrnd84zw http:///schemas/event/_G0vZcEiFEe6jKfRrnd84zw/4 event.profile.uml#_G0vZcUiFEe6jKfRrnd84zw http:///schemas/event/_HiUe4EiKEe6jKfRrnd84zw/5 event.profile.uml#_HiUe4UiKEe6jKfRrnd84zw http:///schemas/event/_JvhWQEiKEe6jKfRrnd84zw/6 event.profile.uml#_JvhWQUiKEe6jKfRrnd84zw http:///schemas/repository/_MOiWYkiKEe6jKfRrnd84zw/0 repository.profile.uml#_MOiWZEiKEe6jKfRrnd84zw http:///schemas/service/_CwnDYUiKEe6jKfRrnd84zw/1 service.profile.uml#_CwnDYkiKEe6jKfRrnd84zw http:///schemas/studentPortal/_wsfXoEh-Ee6jKfRrnd84zw/0 studentPortal.profile.uml#_wshM0Uh-Ee6jKfRrnd84zw">
+  <uml:Model xmi:id="_Y086wEh-Ee6jKfRrnd84zw" name="uml-class-diagram-1" visibility="public">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_Y2RJYEh-Ee6jKfRrnd84zw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_cVd0IEh-Ee6jKfRrnd84zw" name="com.nmims.controllers">
+      <packagedElement xmi:type="uml:Class" xmi:id="_c9dBMEh-Ee6jKfRrnd84zw" name="OpenBadgesController">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wxUbAEiDEe6jKfRrnd84zw" name="badgedaoredissyncevent" type="_N2lL4EiCEe6jKfRrnd84zw" aggregation="composite" association="_wxTz8EiDEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wxUbAUiDEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wxUbAkiDEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VaY0MkiFEe6jKfRrnd84zw" name="class1" type="_S7-RAEiFEe6jKfRrnd84zw" aggregation="composite" association="_VaYNIEiFEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_VaY0M0iFEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VaY0NEiFEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_6icBsEiBEe6jKfRrnd84zw" name="home"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_WFypAEiCEe6jKfRrnd84zw" name="publish"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_wsia9kh-Ee6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wskQIEh-Ee6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="studentPortal.profile.uml#_wshM0Uh-Ee6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="studentPortal.profile.uml#_wsPgAEh-Ee6jKfRrnd84zw"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_geSt8kiCEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_geTU8EiCEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="event.profile.uml#_geSt4kiCEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="event.profile.uml#_geQRoEiCEe6jKfRrnd84zw"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_o3dYUEiCEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3d_UEiCEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="api.profile.uml#_o3dYQkiCEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="api.profile.uml#_o3a8AEiCEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Su9XcEh_Ee6jKfRrnd84zw" name="com.nmims.beans">
+      <packagedElement xmi:type="uml:Class" xmi:id="_xiAN4Eh_Ee6jKfRrnd84zw" name="OpenBadgeBean">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_JMrTcEiAEe6jKfRrnd84zw" name="baseProperties">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Q0jDwEiAEe6jKfRrnd84zw" name="gettersSetters"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_x3v0YEh_Ee6jKfRrnd84zw" name="OpenBadgesCriteriaBean" visibility="private">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ybb60EiAEe6jKfRrnd84zw" general="_xiAN4Eh_Ee6jKfRrnd84zw" isSubstitutable="false"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_fRVdcEiAEe6jKfRrnd84zw" name="criteriaProperties">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_jzHmkEiAEe6jKfRrnd84zw" name="gettersSetters"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yNXfEEh_Ee6jKfRrnd84zw" name="OpenBadgesIssuedBean">
+        <generalization xmi:type="uml:Generalization" xmi:id="_aX-FUEiBEe6jKfRrnd84zw" general="_x3v0YEh_Ee6jKfRrnd84zw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hnHMkEiBEe6jKfRrnd84zw" name="issuedProperties">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_lHVLAEiBEe6jKfRrnd84zw" name="gettersSetters"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_yiUbYEh_Ee6jKfRrnd84zw" name="OpenBadgesUsersBean">
+        <generalization xmi:type="uml:Generalization" xmi:id="_eHOlUEiBEe6jKfRrnd84zw" general="_yNXfEEh_Ee6jKfRrnd84zw"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_psc8AEiBEe6jKfRrnd84zw" name="userProperties">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EJavaObject"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ERoQcEyLEe6R4OvAgUuccg" name="badgedaoredissyncevent" type="_N2lL4EiCEe6jKfRrnd84zw" aggregation="shared" association="_ERl0MEyLEe6R4OvAgUuccg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ERqssEyLEe6R4OvAgUuccg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ERqssUyLEe6R4OvAgUuccg" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_tT1SYEiBEe6jKfRrnd84zw" name="gettersSetters"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_JLcu9kiBEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JLcu90iBEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="OpenBadgesBean.profile.uml#_JLcH4UiBEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="OpenBadgesBean.profile.uml#_JLZEkEiBEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_LaMB8EiCEe6jKfRrnd84zw" name="com.nmims.events">
+      <packagedElement xmi:type="uml:Class" xmi:id="_N2lL4EiCEe6jKfRrnd84zw" name="BadgeDaoRedisSyncEvent">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IDYowEiDEe6jKfRrnd84zw" name="sapId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Mv_h0EiDEe6jKfRrnd84zw" name="CPSId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_LouF0kiFEe6jKfRrnd84zw" name="badgedaoredissynceventlistener" type="__jLs0EiDEe6jKfRrnd84zw" aggregation="composite" association="_LotewEiFEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Lous4EiFEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Lous4UiFEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eyKGwEiDEe6jKfRrnd84zw" name="Object"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_DzaBVkiDEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_DzaBV0iDEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="event.profile.uml#_nP_1wEiDEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="event.profile.uml#_geQRoEiCEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_UBWFAEiCEe6jKfRrnd84zw" name="com.nmims.listeners">
+      <packagedElement xmi:type="uml:Class" xmi:id="__jLs0EiDEe6jKfRrnd84zw" name="BadgeDaoRedisSyncEventListener">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_IbQrUEiFEe6jKfRrnd84zw" name="dataSync"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_kViIYEiGEe6jKfRrnd84zw" informationSource="__jLs0EiDEe6jKfRrnd84zw" informationTarget="_T-XssEiGEe6jKfRrnd84zw"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_G0wAi0iFEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_G0wAjEiFEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="event.profile.uml#_G0vZcUiFEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="event.profile.uml#_geQRoEiCEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_wxTz8EiDEe6jKfRrnd84zw" memberEnd="_wxUbAEiDEe6jKfRrnd84zw _wxUbA0iDEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_wxTz8UiDEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_wxTz8kiDEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_wxUbA0iDEe6jKfRrnd84zw" name="homecontroller" type="_c9dBMEh-Ee6jKfRrnd84zw" association="_wxTz8EiDEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_LotewEiFEe6jKfRrnd84zw" memberEnd="_LouF0kiFEe6jKfRrnd84zw _Lous4kiFEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LouF0EiFEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_LouF0UiFEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Lous4kiFEe6jKfRrnd84zw" name="badgedaoredissyncevent" type="_N2lL4EiCEe6jKfRrnd84zw" association="_LotewEiFEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_QP33IEiFEe6jKfRrnd84zw" name="com.nmims.services">
+      <packagedElement xmi:type="uml:Class" xmi:id="_S7-RAEiFEe6jKfRrnd84zw" name="OpenBadgesService">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uDQK4kiGEe6jKfRrnd84zw" name="class2" type="_V6kToEiGEe6jKfRrnd84zw" aggregation="composite" association="_uDPj0EiGEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uDQK40iGEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uDQK5EiGEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_lXuaoEiFEe6jKfRrnd84zw" client="_S7-RAEiFEe6jKfRrnd84zw" supplier="_e4a04EiFEe6jKfRrnd84zw" contract="_e4a04EiFEe6jKfRrnd84zw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_e4a04EiFEe6jKfRrnd84zw" name="OpenBadgesServiceInterface"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_VaYNIEiFEe6jKfRrnd84zw" memberEnd="_VaY0MkiFEe6jKfRrnd84zw _VaY0NUiFEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_VaY0MEiFEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_VaY0MUiFEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_VaY0NUiFEe6jKfRrnd84zw" name="homecontroller" type="_c9dBMEh-Ee6jKfRrnd84zw" association="_VaYNIEiFEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BDIKsEiGEe6jKfRrnd84zw" name="com.nmims.repository">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_T-XssEiGEe6jKfRrnd84zw" name="redis">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eIFHoEiGEe6jKfRrnd84zw" name="CRUD"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_BXqQQEiGEe6jKfRrnd84zw" name="com.nmims.daos">
+      <packagedElement xmi:type="uml:Interface" xmi:id="_VF2SIEiGEe6jKfRrnd84zw" name="OpenBadgesServiceInterface"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_V6kToEiGEe6jKfRrnd84zw" name="OpenBadgesService">
+        <interfaceRealization xmi:type="uml:InterfaceRealization" xmi:id="_vl_wAEiGEe6jKfRrnd84zw" client="_V6kToEiGEe6jKfRrnd84zw" supplier="_VF2SIEiGEe6jKfRrnd84zw" contract="_VF2SIEiGEe6jKfRrnd84zw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_jfXVYEiGEe6jKfRrnd84zw" informationSource="_V6kToEiGEe6jKfRrnd84zw" informationTarget="__jLs0EiDEe6jKfRrnd84zw"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7VVsAEiGEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7VVsAUiGEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="service.profile.uml#_7VVE80iGEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="service.profile.uml#_7VSosEiGEe6jKfRrnd84zw"/>
+      </profileApplication>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_AaVP7kiHEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_AaVP70iHEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="dao.profile.uml#_AaVP4kiHEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="dao.profile.uml#_AaSMkEiHEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_uDPj0EiGEe6jKfRrnd84zw" memberEnd="_uDQK4kiGEe6jKfRrnd84zw _uDQK5UiGEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uDQK4EiGEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uDQK4UiGEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_uDQK5UiGEe6jKfRrnd84zw" name="openbadgesservice" type="_S7-RAEiFEe6jKfRrnd84zw" association="_uDPj0EiGEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_G6YnEEiIEe6jKfRrnd84zw" name="com.nmims.controllers">
+      <packagedElement xmi:type="uml:Class" xmi:id="_K5W-EEiIEe6jKfRrnd84zw" name="OpenBadgesController">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Pj4-EkiJEe6jKfRrnd84zw" name="badgeupdatedaoredissyncevent" type="_7DliwEiIEe6jKfRrnd84zw" aggregation="composite" association="_Pj4XAEiJEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Pj4-E0iJEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Pj5lIEiJEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_hGyNE0iJEe6jKfRrnd84zw" name="openbadgesservices" type="_jtuPkEiIEe6jKfRrnd84zw" aggregation="composite" association="_hGyNEEiJEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hGyNFEiJEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hGy0IEiJEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_PaEJIEiIEe6jKfRrnd84zw" name="handlers"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_TfHS9kiIEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TfHS90iIEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="controller.profile.uml#_TfGr40iIEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="controller.profile.uml#_TfDokEiIEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_aOpGAEiIEe6jKfRrnd84zw" name="com.nmims.services">
+      <packagedElement xmi:type="uml:Class" xmi:id="_jtuPkEiIEe6jKfRrnd84zw" name="OpenBadgesServices">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tCyhgEiIEe6jKfRrnd84zw" name="openbadgesdao" type="_kbJWQEiIEe6jKfRrnd84zw" aggregation="composite" association="_tCx6cEiIEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tCyhgUiIEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tCyhgkiIEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_CwnqeEiKEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CwnqeUiKEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="service.profile.uml#_CwnDYkiKEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="service.profile.uml#_7VSosEiGEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_gKrmoEiIEe6jKfRrnd84zw" name="com.nmims.dao">
+      <packagedElement xmi:type="uml:Class" xmi:id="_kbJWQEiIEe6jKfRrnd84zw" name="OpenBadgesDao"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_ZgslcEiJEe6jKfRrnd84zw" informationSource="_kbJWQEiIEe6jKfRrnd84zw" informationTarget="_-8YZQEiIEe6jKfRrnd84zw"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_E565SEiKEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_E565SUiKEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="dao.profile.uml#_E56SNEiKEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="dao.profile.uml#_AaSMkEiHEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_tCx6cEiIEe6jKfRrnd84zw" memberEnd="_tCyhgEiIEe6jKfRrnd84zw _tCyhg0iIEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tCx6cUiIEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tCx6ckiIEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_tCyhg0iIEe6jKfRrnd84zw" name="openbadgesservices" type="_jtuPkEiIEe6jKfRrnd84zw" association="_tCx6cEiIEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_vN9YkEiIEe6jKfRrnd84zw" name="com.nmims.events">
+      <packagedElement xmi:type="uml:Class" xmi:id="_7DliwEiIEe6jKfRrnd84zw" name="BadgeUpdateDaoRedisSyncEvent">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Vp-ykkiJEe6jKfRrnd84zw" name="badgeupdatedaoredissynceventlistener" type="_9KFVMEiIEe6jKfRrnd84zw" aggregation="composite" association="_Vp-LgEiJEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Vp-yk0iJEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Vp-ylEiJEe6jKfRrnd84zw" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HiVF-kiKEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HiVF-0iKEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="event.profile.uml#_HiUe4UiKEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="event.profile.uml#_geQRoEiCEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_xTL_sEiIEe6jKfRrnd84zw" name="com.nmims.listeners">
+      <packagedElement xmi:type="uml:Class" xmi:id="_9KFVMEiIEe6jKfRrnd84zw" name="BadgeUpdateDaoRedisSyncEventListener">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bwdBk0iJEe6jKfRrnd84zw" name="badgesrepositoryforredis" type="_-8YZQEiIEe6jKfRrnd84zw" aggregation="composite" association="_bwdBkEiJEe6jKfRrnd84zw">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bwdooEiJEe6jKfRrnd84zw"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bwdooUiJEe6jKfRrnd84zw" value="*"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_41gsMEiJEe6jKfRrnd84zw" name="claim"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_7D8SoEiJEe6jKfRrnd84zw" name="reclaim"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_8LNcsEiJEe6jKfRrnd84zw" name="revoked"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_Jvh9XUiKEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Jvh9XkiKEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="event.profile.uml#_JvhWQUiKEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="event.profile.uml#_geQRoEiCEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_0-FkIEiIEe6jKfRrnd84zw" name="com.nmims.repository">
+      <packagedElement xmi:type="uml:Class" xmi:id="_-8YZQEiIEe6jKfRrnd84zw" name="BadgesRepositoryForRedis"/>
+      <packagedElement xmi:type="uml:InformationFlow" xmi:id="_pClmAEiJEe6jKfRrnd84zw" informationSource="_-8YZQEiIEe6jKfRrnd84zw" informationTarget="_jtuPkEiIEe6jKfRrnd84zw"/>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_MOi9dkiKEe6jKfRrnd84zw">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_MOi9d0iKEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="repository.profile.uml#_MOiWZEiKEe6jKfRrnd84zw"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="repository.profile.uml#_MOfTEEiKEe6jKfRrnd84zw"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Pj4XAEiJEe6jKfRrnd84zw" memberEnd="_Pj4-EkiJEe6jKfRrnd84zw _Pj5lIUiJEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Pj4-EEiJEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Pj4-EUiJEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Pj5lIUiJEe6jKfRrnd84zw" name="openbadgescontroller" type="_K5W-EEiIEe6jKfRrnd84zw" association="_Pj4XAEiJEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Vp-LgEiJEe6jKfRrnd84zw" memberEnd="_Vp-ykkiJEe6jKfRrnd84zw _Vp-ylUiJEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Vp-ykEiJEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Vp-ykUiJEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Vp-ylUiJEe6jKfRrnd84zw" name="badgeupdatedaoredissyncevent" type="_7DliwEiIEe6jKfRrnd84zw" association="_Vp-LgEiJEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bwdBkEiJEe6jKfRrnd84zw" memberEnd="_bwdBk0iJEe6jKfRrnd84zw _bwdookiJEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_bwdBkUiJEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_bwdBkkiJEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_bwdookiJEe6jKfRrnd84zw" name="badgeupdatedaoredissynceventlistener" type="_9KFVMEiIEe6jKfRrnd84zw" association="_bwdBkEiJEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_hGyNEEiJEe6jKfRrnd84zw" memberEnd="_hGyNE0iJEe6jKfRrnd84zw _hGy0IUiJEe6jKfRrnd84zw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_hGyNEUiJEe6jKfRrnd84zw" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_hGyNEkiJEe6jKfRrnd84zw" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_hGy0IUiJEe6jKfRrnd84zw" name="openbadgescontroller" type="_K5W-EEiIEe6jKfRrnd84zw" association="_hGyNEEiJEe6jKfRrnd84zw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ERl0MEyLEe6R4OvAgUuccg" memberEnd="_ERoQcEyLEe6R4OvAgUuccg _ERrTwEyLEe6R4OvAgUuccg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ERnCUEyLEe6R4OvAgUuccg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ERnCUUyLEe6R4OvAgUuccg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_ERrTwEyLEe6R4OvAgUuccg" name="openbadgesusersbean" type="_yiUbYEh_Ee6jKfRrnd84zw" association="_ERl0MEyLEe6R4OvAgUuccg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Jd8kUEyLEe6R4OvAgUuccg" name="Package25">
+      <packagedElement xmi:type="uml:Class" xmi:id="_MHSlIEyLEe6R4OvAgUuccg" name="RedisDaoSyncBean">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Zh4iAkyLEe6R4OvAgUuccg" name="openbadgescontroller" type="_c9dBMEh-Ee6jKfRrnd84zw" aggregation="composite" association="_Zh368EyLEe6R4OvAgUuccg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Zh4iA0yLEe6R4OvAgUuccg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Zh5JEEyLEe6R4OvAgUuccg" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dviOMEyLEe6R4OvAgUuccg" name="sapid">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_huR7sEyLEe6R4OvAgUuccg" name="CPSId">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_mK8UQEyLEe6R4OvAgUuccg" name="gettersSetters"/>
+      </packagedElement>
+      <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_XIkhRkyLEe6R4OvAgUuccg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XImWcEyLEe6R4OvAgUuccg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+          <references xmi:type="ecore:EPackage" href="bean.profile.uml#_XIisEUyLEe6R4OvAgUuccg"/>
+        </eAnnotations>
+        <appliedProfile xmi:type="uml:Profile" href="bean.profile.uml#_XITbgEyLEe6R4OvAgUuccg"/>
+      </profileApplication>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_Zh368EyLEe6R4OvAgUuccg" memberEnd="_Zh4iAkyLEe6R4OvAgUuccg _Zh5JEUyLEe6R4OvAgUuccg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Zh4iAEyLEe6R4OvAgUuccg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Zh4iAUyLEe6R4OvAgUuccg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_Zh5JEUyLEe6R4OvAgUuccg" name="redisdaosyncbean" type="_MHSlIEyLEe6R4OvAgUuccg" association="_Zh368EyLEe6R4OvAgUuccg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interaction" xmi:id="_7qz5sEyMEe6R4OvAgUuccg" name="adminApiUpdateRedisSyncDiagram">
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_WKLUcEyNEe6R4OvAgUuccg" name="adminApi" coveredBy="_oGMOEEyNEe6R4OvAgUuccg _oGJx0EyNEe6R4OvAgUuccg _umB_UEyNEe6R4OvAgUuccg _xK36oUyNEe6R4OvAgUuccg _A1FwwEyOEe6R4OvAgUuccg _oGMOEUyNEe6R4OvAgUuccg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_ZmHP0EyNEe6R4OvAgUuccg" name="eventListener" coveredBy="_umB_UUyNEe6R4OvAgUuccg _v86SsUyNEe6R4OvAgUuccg _qPQzYEyNEe6R4OvAgUuccg _qPPlQEyNEe6R4OvAgUuccg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_dNmT4EyNEe6R4OvAgUuccg" name="action" coveredBy="_v865wEyNEe6R4OvAgUuccg _xK36oEyNEe6R4OvAgUuccg _s4Z_4UyNEe6R4OvAgUuccg _s4ZY0EyNEe6R4OvAgUuccg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_goUuUEyNEe6R4OvAgUuccg" name="interaction" coveredBy="_z76e4EyNEe6R4OvAgUuccg _z7530EyNEe6R4OvAgUuccg _A1FwwUyOEe6R4OvAgUuccg _55kwIUyNEe6R4OvAgUuccg _z77F8EyNEe6R4OvAgUuccg _7lFPsUyNEe6R4OvAgUuccg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_igMO4EyNEe6R4OvAgUuccg" name="eventListener" coveredBy="_2HVNkEyNEe6R4OvAgUuccg _2HUmgEyNEe6R4OvAgUuccg _55kwIkyNEe6R4OvAgUuccg _6kJXIUyNEe6R4OvAgUuccg _2HVNkUyNEe6R4OvAgUuccg"/>
+      <lifeline xmi:type="uml:Lifeline" xmi:id="_j4YJ0EyNEe6R4OvAgUuccg" name="action" coveredBy="_6kJXIkyNEe6R4OvAgUuccg _7lFPsEyNEe6R4OvAgUuccg _2rN9wEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_oGMOEEyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification7Start" covered="_WKLUcEyNEe6R4OvAgUuccg" execution="_oGJx0EyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_oGJx0EyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification7" covered="_WKLUcEyNEe6R4OvAgUuccg" finish="_oGMOEUyNEe6R4OvAgUuccg" start="_oGMOEEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_umB_UEyNEe6R4OvAgUuccg" name="Message16SendEvent" covered="_WKLUcEyNEe6R4OvAgUuccg" message="_umAxMEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_qPPlQEyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification10" covered="_ZmHP0EyNEe6R4OvAgUuccg" finish="_qPQzYEyNEe6R4OvAgUuccg" start="_umB_UEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_umB_UUyNEe6R4OvAgUuccg" name="Message16ReceiveEvent" covered="_ZmHP0EyNEe6R4OvAgUuccg" message="_umAxMEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_v86SsUyNEe6R4OvAgUuccg" name="Message18SendEvent" covered="_ZmHP0EyNEe6R4OvAgUuccg" message="_v86SsEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_v865wEyNEe6R4OvAgUuccg" name="Message18ReceiveEvent" covered="_dNmT4EyNEe6R4OvAgUuccg" message="_v86SsEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_s4ZY0EyNEe6R4OvAgUuccg" name="ActionExecutionSpecification13" covered="_dNmT4EyNEe6R4OvAgUuccg" finish="_s4Z_4UyNEe6R4OvAgUuccg" start="_v865wEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_z76e4EyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification23Start" covered="_goUuUEyNEe6R4OvAgUuccg" execution="_z7530EyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_z7530EyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification23" covered="_goUuUEyNEe6R4OvAgUuccg" finish="_z77F8EyNEe6R4OvAgUuccg" start="_z76e4EyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_qPQzYEyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification10Finish" covered="_ZmHP0EyNEe6R4OvAgUuccg" execution="_qPPlQEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xK36oEyNEe6R4OvAgUuccg" name="Message20SendEvent" covered="_dNmT4EyNEe6R4OvAgUuccg" message="_xK3TkEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_xK36oUyNEe6R4OvAgUuccg" name="Message20ReceiveEvent" covered="_WKLUcEyNEe6R4OvAgUuccg" message="_xK3TkEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_s4Z_4UyNEe6R4OvAgUuccg" name="ActionExecutionSpecification13Finish" covered="_dNmT4EyNEe6R4OvAgUuccg" execution="_s4ZY0EyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_A1FwwEyOEe6R4OvAgUuccg" name="Message39SendEvent" covered="_WKLUcEyNEe6R4OvAgUuccg" message="_A1FJsEyOEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_2HVNkEyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification26Start" covered="_igMO4EyNEe6R4OvAgUuccg" execution="_2HUmgEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_2HUmgEyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification26" covered="_igMO4EyNEe6R4OvAgUuccg" finish="_2HVNkUyNEe6R4OvAgUuccg" start="_2HVNkEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_A1FwwUyOEe6R4OvAgUuccg" name="Message39ReceiveEvent" covered="_goUuUEyNEe6R4OvAgUuccg" message="_A1FJsEyOEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_55kwIUyNEe6R4OvAgUuccg" name="Message32SendEvent" covered="_goUuUEyNEe6R4OvAgUuccg" message="_55kwIEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_55kwIkyNEe6R4OvAgUuccg" name="Message32ReceiveEvent" covered="_igMO4EyNEe6R4OvAgUuccg" message="_55kwIEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6kJXIUyNEe6R4OvAgUuccg" name="Message35SendEvent" covered="_igMO4EyNEe6R4OvAgUuccg" message="_6kJXIEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6kJXIkyNEe6R4OvAgUuccg" name="Message35ReceiveEvent" covered="_j4YJ0EyNEe6R4OvAgUuccg" message="_6kJXIEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_2rN9wEyNEe6R4OvAgUuccg" name="ActionExecutionSpecification29" covered="_j4YJ0EyNEe6R4OvAgUuccg" finish="_7lFPsEyNEe6R4OvAgUuccg" start="_6kJXIkyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_2HVNkUyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification26Finish" covered="_igMO4EyNEe6R4OvAgUuccg" execution="_2HUmgEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7lFPsEyNEe6R4OvAgUuccg" name="Message37SendEvent" covered="_j4YJ0EyNEe6R4OvAgUuccg" message="_7lEooEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_z77F8EyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification23Finish" covered="_goUuUEyNEe6R4OvAgUuccg" execution="_z7530EyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_7lFPsUyNEe6R4OvAgUuccg" name="Message37ReceiveEvent" covered="_goUuUEyNEe6R4OvAgUuccg" message="_7lEooEyNEe6R4OvAgUuccg"/>
+      <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_oGMOEUyNEe6R4OvAgUuccg" name="BehaviorExecutionSpecification7Finish" covered="_WKLUcEyNEe6R4OvAgUuccg" execution="_oGJx0EyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_umAxMEyNEe6R4OvAgUuccg" name="publisher" messageSort="asynchCall" receiveEvent="_umB_UUyNEe6R4OvAgUuccg" sendEvent="_umB_UEyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_v86SsEyNEe6R4OvAgUuccg" name="subscriber" messageSort="asynchCall" receiveEvent="_v865wEyNEe6R4OvAgUuccg" sendEvent="_v86SsUyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_xK3TkEyNEe6R4OvAgUuccg" name="redisSync" messageSort="reply" receiveEvent="_xK36oUyNEe6R4OvAgUuccg" sendEvent="_xK36oEyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_55kwIEyNEe6R4OvAgUuccg" name="publisher" messageSort="asynchCall" receiveEvent="_55kwIkyNEe6R4OvAgUuccg" sendEvent="_55kwIUyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_6kJXIEyNEe6R4OvAgUuccg" name="subscriber" messageSort="asynchCall" receiveEvent="_6kJXIkyNEe6R4OvAgUuccg" sendEvent="_6kJXIUyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_7lEooEyNEe6R4OvAgUuccg" name="redisSync" messageSort="reply" receiveEvent="_7lFPsUyNEe6R4OvAgUuccg" sendEvent="_7lFPsEyNEe6R4OvAgUuccg"/>
+      <message xmi:type="uml:Message" xmi:id="_A1FJsEyOEe6R4OvAgUuccg" name="enables" messageSort="asynchCall" receiveEvent="_A1FwwUyOEe6R4OvAgUuccg" sendEvent="_A1FwwEyOEe6R4OvAgUuccg"/>
+    </packagedElement>
+  </uml:Model>
+  <studentPortal:controller xmi:id="_wsmsYEh-Ee6jKfRrnd84zw" base_Class="_c9dBMEh-Ee6jKfRrnd84zw" className="home"/>
+  <OpenBadgesBean:bean xmi:id="_JLdWAEiBEe6jKfRrnd84zw" base_Class="_xiAN4Eh_Ee6jKfRrnd84zw" name="defaultValue"/>
+  <OpenBadgesBean:bean xmi:id="_MdB0cEiBEe6jKfRrnd84zw" base_Class="_x3v0YEh_Ee6jKfRrnd84zw"/>
+  <OpenBadgesBean:bean xmi:id="_Nk_iEEiBEe6jKfRrnd84zw" base_Class="_yNXfEEh_Ee6jKfRrnd84zw"/>
+  <OpenBadgesBean:bean xmi:id="_OggvIEiBEe6jKfRrnd84zw" base_Class="_yiUbYEh_Ee6jKfRrnd84zw"/>
+  <event:event xmi:id="_geTU8UiCEe6jKfRrnd84zw" base_Operation="_WFypAEiCEe6jKfRrnd84zw" publisher="defaultValue" subscriber="defaultValue"/>
+  <api:authenticate xmi:id="_o3d_UUiCEe6jKfRrnd84zw" base_Operation="_6icBsEiBEe6jKfRrnd84zw" student="student"/>
+  <event_1:applicationEvent xmi:id="_b5KgYEiDEe6jKfRrnd84zw" base_Class="_N2lL4EiCEe6jKfRrnd84zw" name="defaultValue"/>
+  <event_1:async xmi:id="_nQC5EEiDEe6jKfRrnd84zw" base_Operation="_eyKGwEiDEe6jKfRrnd84zw"/>
+  <event_2:listener xmi:id="_G0wnkEiFEe6jKfRrnd84zw" base_Class="__jLs0EiDEe6jKfRrnd84zw" name="defaultValue"/>
+  <dao:dao xmi:id="_AaV28EiHEe6jKfRrnd84zw" base_Class="_V6kToEiGEe6jKfRrnd84zw"/>
+  <controller:controller xmi:id="_TfHS-EiIEe6jKfRrnd84zw" base_Class="_K5W-EEiIEe6jKfRrnd84zw"/>
+  <service:service xmi:id="_CwoRgEiKEe6jKfRrnd84zw" base_Class="_jtuPkEiIEe6jKfRrnd84zw"/>
+  <dao_1:dao xmi:id="_E57gUEiKEe6jKfRrnd84zw" base_Class="_kbJWQEiIEe6jKfRrnd84zw"/>
+  <event_3:applicationEvent xmi:id="_HiVF_EiKEe6jKfRrnd84zw" base_Class="_7DliwEiIEe6jKfRrnd84zw"/>
+  <event_4:listener xmi:id="_JvikYEiKEe6jKfRrnd84zw" base_Class="_9KFVMEiIEe6jKfRrnd84zw"/>
+  <repository:repository xmi:id="_MOi9eEiKEe6jKfRrnd84zw" base_Class="_-8YZQEiIEe6jKfRrnd84zw"/>
+  <bean:bean xmi:id="_XIm9gEyLEe6R4OvAgUuccg" base_Class="_MHSlIEyLEe6R4OvAgUuccg"/>
+</xmi:XMI>

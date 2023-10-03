@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+          border: 1px solid black;
+        }
+      </style>
+
+</head>
+
+<body>
+    <canvas id="canvas" width="150" height="150">Canvas</canvas>
+</body>
+
+<script>
+    function draw() {
+        const ctx = document.getElementById("canvas").getContext("2d");
+        ctx.lineWidth = 10;
+        ["round", "bevel", "miter"].forEach((lineJoin, i) => {
+          ctx.lineJoin = lineJoin;
+          ctx.beginPath();
+          ctx.moveTo(-5, 5 + i * 40);
+          ctx.lineTo(35, 45 + i * 40);
+          ctx.lineTo(75, 5 + i * 40);
+          ctx.lineTo(115, 45 + i * 40);
+          ctx.lineTo(155, 5 + i * 40);
+          ctx.stroke();
+        });
+      }
+    draw();
+</script>
+
+</html>

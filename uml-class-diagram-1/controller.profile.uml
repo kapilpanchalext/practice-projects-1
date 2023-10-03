@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_TfDokEiIEe6jKfRrnd84zw" name="controller" metaclassReference="_TfGE0UiIEe6jKfRrnd84zw">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TfGr4kiIEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_TfGr40iIEe6jKfRrnd84zw" name="controller" nsURI="http:///schemas/controller/_TfGr4UiIEe6jKfRrnd84zw/0" nsPrefix="controller">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TfHS8EiIEe6jKfRrnd84zw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TfHS8UiIEe6jKfRrnd84zw" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TfHS8kiIEe6jKfRrnd84zw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TfHS80iIEe6jKfRrnd84zw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TfHS9EiIEe6jKfRrnd84zw" key="Date" value="9/1/23, 10:57 AM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_TfHS9UiIEe6jKfRrnd84zw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_TfGr5EiIEe6jKfRrnd84zw" name="controller">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_TfGr5UiIEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_TfGE0EiIEe6jKfRrnd84zw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_TfGr5kiIEe6jKfRrnd84zw" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_TfGE0UiIEe6jKfRrnd84zw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_TfGE0EiIEe6jKfRrnd84zw" name="controller">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_TfGr4EiIEe6jKfRrnd84zw" name="base_Class" association="_TfGE0kiIEe6jKfRrnd84zw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_TfGE0kiIEe6jKfRrnd84zw" name="Class_controller" memberEnd="_TfGE00iIEe6jKfRrnd84zw _TfGr4EiIEe6jKfRrnd84zw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_TfGE00iIEe6jKfRrnd84zw" name="extension_controller" type="_TfGE0EiIEe6jKfRrnd84zw" aggregation="composite" association="_TfGE0kiIEe6jKfRrnd84zw"/>
+  </packagedElement>
+</uml:Profile>

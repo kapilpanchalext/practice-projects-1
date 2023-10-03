@@ -1,0 +1,14 @@
+1) docker build -t spring-tomcat-max-connections-docker-2-app .
+
+2) @FOR /f "tokens=*" %i IN ('minikube -p minikube docker-env --shell cmd') DO @%i
+
+3) kubectl run spring-tomcat-max-connections-docker-2-app-container --image=spring-tomcat-max-connections-docker-2-app --image-pull-policy=Never --restart=Never
+pod/spring-tomcat-max-connections-docker-2-app-container created
+
+4) kubectl apply -f service.yaml
+
+5) kubectl get services (https://kubernetes.io/docs/tutorials/hello-minikube/)
+
+6) minikube service hello-node (https://kubernetes.io/docs/tutorials/hello-minikube/)
+
+7) kubectl create deployment spring-tomcat-max-connections-docker-2-app --image=docker.io/kapilpanchalextnmimsedu/spring-tomcat-connections:latest

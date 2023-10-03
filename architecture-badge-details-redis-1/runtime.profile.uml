@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_eWyD4FH7Ee6-SJ2VOpFKQQ" name="runtime" metaclassReference="_eWz5EVH7Ee6-SJ2VOpFKQQ">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eW1HMFH7Ee6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_eW1HMVH7Ee6-SJ2VOpFKQQ" name="runtime" nsURI="http:///schemas/runtime/_eW0gI1H7Ee6-SJ2VOpFKQQ/0" nsPrefix="runtime">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eW1HN1H7Ee6-SJ2VOpFKQQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eW1HOFH7Ee6-SJ2VOpFKQQ" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eW1HOVH7Ee6-SJ2VOpFKQQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eW1HOlH7Ee6-SJ2VOpFKQQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eW1HO1H7Ee6-SJ2VOpFKQQ" key="Date" value="9/13/23, 11:35 AM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eW1HPFH7Ee6-SJ2VOpFKQQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_eW1HMlH7Ee6-SJ2VOpFKQQ" name="runtime">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eW1HM1H7Ee6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_eWz5EFH7Ee6-SJ2VOpFKQQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_eW1HNFH7Ee6-SJ2VOpFKQQ" name="base_ControlFlow" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//ControlFlow"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_eWz5EVH7Ee6-SJ2VOpFKQQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ControlFlow"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_eWz5EFH7Ee6-SJ2VOpFKQQ" name="runtime">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_eW0gIlH7Ee6-SJ2VOpFKQQ" name="base_ControlFlow" association="_eW0gIFH7Ee6-SJ2VOpFKQQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#ControlFlow"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_eW0gIFH7Ee6-SJ2VOpFKQQ" name="ControlFlow_runtime" memberEnd="_eW0gIVH7Ee6-SJ2VOpFKQQ _eW0gIlH7Ee6-SJ2VOpFKQQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_eW0gIVH7Ee6-SJ2VOpFKQQ" name="extension_runtime" type="_eWz5EFH7Ee6-SJ2VOpFKQQ" aggregation="composite" association="_eW0gIFH7Ee6-SJ2VOpFKQQ"/>
+  </packagedElement>
+</uml:Profile>

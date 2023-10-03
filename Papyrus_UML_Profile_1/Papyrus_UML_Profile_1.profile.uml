@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_H3CiMEf8Ee6bqNkPpftvtg" name="Papyrus_UML_Profile_1">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fyKekUf8Ee6bqNkPpftvtg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_fyLFoEf8Ee6bqNkPpftvtg" name="Papyrus_UML_Profile_1" nsURI="http:///schemas/Papyrus_UML_Profile_1/_fyKekEf8Ee6bqNkPpftvtg/0" nsPrefix="Papyrus_UML_Profile_1">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fyLFpUf8Ee6bqNkPpftvtg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fyLFpkf8Ee6bqNkPpftvtg" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fyLFp0f8Ee6bqNkPpftvtg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fyLFqEf8Ee6bqNkPpftvtg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fyLFqUf8Ee6bqNkPpftvtg" key="Date" value="2023-08-31"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fyLFqkf8Ee6bqNkPpftvtg" key="Author" value=""/>
+      </eAnnotations>
+      <eSubpackages xmi:type="ecore:EPackage" xmi:id="_fyLFoUf8Ee6bqNkPpftvtg" name="Package3" nsURI="http:///Papyrus_UML_Profile_1/Package3.ecore" nsPrefix="Papyrus_UML_Profile_1.Package3">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fyLFokf8Ee6bqNkPpftvtg" source="http://www.eclipse.org/uml2/4.0.0/UML" references="_JsQ-cEf8Ee6bqNkPpftvtg"/>
+      </eSubpackages>
+      <eSubpackages xmi:type="ecore:EPackage" xmi:id="_fyLFo0f8Ee6bqNkPpftvtg" name="Model4" nsURI="http:///Papyrus_UML_Profile_1/Model4.ecore" nsPrefix="Papyrus_UML_Profile_1.Model4">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fyLFpEf8Ee6bqNkPpftvtg" source="http://www.eclipse.org/uml2/4.0.0/UML" references="_cm4OUEf8Ee6bqNkPpftvtg"/>
+      </eSubpackages>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_H_G5EEf8Ee6bqNkPpftvtg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_H_KjcEf8Ee6bqNkPpftvtg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_JsQ-cEf8Ee6bqNkPpftvtg" name="Package3"/>
+  <packagedElement xmi:type="uml:Model" xmi:id="_cm4OUEf8Ee6bqNkPpftvtg" name="Model4"/>
+</uml:Profile>

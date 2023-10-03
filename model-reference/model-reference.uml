@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:microservice="http:///schemas/microservice/_Xs8SIFL4Ee6vS5oSlbwpfw/0" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/microservice/_Xs8SIFL4Ee6vS5oSlbwpfw/0 microservice.profile.uml#_Xs-uYVL4Ee6vS5oSlbwpfw">
+  <uml:Model xmi:id="__316sFL2Ee6vS5oSlbwpfw" name="model-reference" visibility="public">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="__5VvgFL2Ee6vS5oSlbwpfw">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_BDEXsFL3Ee6vS5oSlbwpfw" name="microservice AB">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Zl70EFL4Ee6vS5oSlbwpfw" name="Property1">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_i8WJ0FL4Ee6vS5oSlbwpfw" name="Property2"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_IWyyEFL5Ee6vS5oSlbwpfw" name="Class3"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_7hEnYFL5Ee6vS5oSlbwpfw" name="Class4"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_XtAjl1L4Ee6vS5oSlbwpfw">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XtEN8FL4Ee6vS5oSlbwpfw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="microservice.profile.uml#_Xs-uYVL4Ee6vS5oSlbwpfw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="microservice.profile.uml#_XsxTAFL4Ee6vS5oSlbwpfw"/>
+    </profileApplication>
+  </uml:Model>
+  <microservice:microservice xmi:id="_XtE1AFL4Ee6vS5oSlbwpfw" base_Component="_BDEXsFL3Ee6vS5oSlbwpfw"/>
+</xmi:XMI>

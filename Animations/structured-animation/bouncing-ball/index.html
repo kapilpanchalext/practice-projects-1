@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="field">
+        <img src="https://js.cx/clipart/ball.svg" width="80" height="80" id="ball">
+    </div>
+
+    <style>
+        #field {
+            width: 500px; 
+            height: 500px;
+            overflow: hidden;
+        }
+        #ball {
+            width: 100%;
+            height: 100;
+            transform: scaleY(1);
+            transform-origin: bottom center; 
+        } 
+    </style>
+
+    <script>
+
+        function animate(options) {
+            var start = performance.now();
+            requestAnimationFrame(function animate(time) {
+
+                var timeFraction = (time - start) / options.duration;
+                if (timeFraction > 1) timeFraction = 1;
+                var progress = options.timing(timeFraction);                
+                options.draw(progress);
+            
+                if (timeFraction < 1) {
+                    requestAnimationFrame(animate);
+                }
+            });
+        }
+
+        function makeEaseOut(timing) {
+            return function(timeFraction) {
+                return 1 - timing(1 - timeFraction);
+            }
+        }
+
+        function bounce(timeFraction) {
+            for (let a = 0, b = 1; 1; a += b, b /= 2) {
+                if (timeFraction >= (7 - 4 * a) / 11) {
+                    return -Math.pow((11 - 6 * a - 11 * timeFraction) / 4, 2) + Math.pow(b, 2)
+                }
+            }
+        }
+
+        // function quad(timeFraction) {
+        //     return Math.pow(timeFraction, 2);
+        // }
+
+        // function elastic(timeFraction) {
+        //   return Math.pow(2, 10 * (timeFraction - 1)) * Math.cos(20 * Math.PI * 2 / 3 * timeFraction)
+        // }
+
+        ball.onclick = function() {
+            let to = field.clientHeight - ball.clientHeight;
+            let toScale = 0.5;
+            let flag = false;
+            animate({
+            duration: 20000,
+            timing: makeEaseOut(bounce),            
+            draw(progress) {
+                console.log("Progress: ", progress);
+                ball.style.top = to * progress + 'px';
+                // ball.style.transform = `scaleY(${toScale + (1 - (progress)) * 0.5})`;
+                    if (progress > 0.999) {
+                        let scaleProgress = 1 - bounce(progress * 1);
+                        ball.style.transform = `scaleY(${toScale + scaleProgress * 0.5})`;
+                        flag=true;
+                    }
+                    if (progress < 0.99 && flag===true) {
+                        let scaleProgress = 1 - bounce(progress * 1);
+                        ball.style.transform = `scaleY(${toScale + scaleProgress * 1})`;
+                        flag=false;
+                    }
+                  
+                    
+                    
+                    /*else {
+                        let scaleProgress = 1 - bounce((1 - progress) * 2);
+                        ball.style.transform = `scaleY(${toScale + scaleProgress * 0.5})`;
+                    }*/
+                }
+            });
+        };
+    </script>
+</body>
+</html>

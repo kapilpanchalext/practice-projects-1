@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_CdEhIFHyEe6-SJ2VOpFKQQ" name="clicks" metaclassReference="_CdFvQVHyEe6-SJ2VOpFKQQ _JLnK0FH0Ee6-SJ2VOpFKQQ">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CdG9YVHyEe6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_JLpAAFH0Ee6-SJ2VOpFKQQ" name="clicks" nsURI="http:///schemas/clicks/_JLoY8FH0Ee6-SJ2VOpFKQQ/1" nsPrefix="clicks">
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_JLpAAVH0Ee6-SJ2VOpFKQQ" name="clicks">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JLpAAlH0Ee6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_CdFvQFHyEe6-SJ2VOpFKQQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_JLpAA1H0Ee6-SJ2VOpFKQQ" name="base_Association" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_JLpABVH0Ee6-SJ2VOpFKQQ" name="base_Usage" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Usage"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+    <contents xmi:type="ecore:EPackage" xmi:id="_CdG9YlHyEe6-SJ2VOpFKQQ" name="clicks" nsURI="http:///schemas/clicks/_CdG9YFHyEe6-SJ2VOpFKQQ/0" nsPrefix="clicks">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CdG9aFHyEe6-SJ2VOpFKQQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CdG9aVHyEe6-SJ2VOpFKQQ" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CdG9alHyEe6-SJ2VOpFKQQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CdG9a1HyEe6-SJ2VOpFKQQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CdG9bFHyEe6-SJ2VOpFKQQ" key="Date" value="9/13/23, 10:27 AM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_CdG9bVHyEe6-SJ2VOpFKQQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_CdG9Y1HyEe6-SJ2VOpFKQQ" name="clicks">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_CdG9ZFHyEe6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_CdFvQFHyEe6-SJ2VOpFKQQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_CdG9ZVHyEe6-SJ2VOpFKQQ" name="base_Association" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_CdFvQVHyEe6-SJ2VOpFKQQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+  </elementImport>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_JLnK0FH0Ee6-SJ2VOpFKQQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Usage"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_CdFvQFHyEe6-SJ2VOpFKQQ" name="clicks">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_CdGWUlHyEe6-SJ2VOpFKQQ" name="base_Association" association="_CdGWUFHyEe6-SJ2VOpFKQQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JLnx4lH0Ee6-SJ2VOpFKQQ" name="base_Usage" association="_JLnx4FH0Ee6-SJ2VOpFKQQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Usage"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_CdGWUFHyEe6-SJ2VOpFKQQ" name="Association_clicks" memberEnd="_CdGWUVHyEe6-SJ2VOpFKQQ _CdGWUlHyEe6-SJ2VOpFKQQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_CdGWUVHyEe6-SJ2VOpFKQQ" name="extension_clicks" type="_CdFvQFHyEe6-SJ2VOpFKQQ" aggregation="composite" association="_CdGWUFHyEe6-SJ2VOpFKQQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_JLnx4FH0Ee6-SJ2VOpFKQQ" name="Usage_clicks" memberEnd="_JLnx4VH0Ee6-SJ2VOpFKQQ _JLnx4lH0Ee6-SJ2VOpFKQQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_JLnx4VH0Ee6-SJ2VOpFKQQ" name="extension_clicks" type="_CdFvQFHyEe6-SJ2VOpFKQQ" aggregation="composite" association="_JLnx4FH0Ee6-SJ2VOpFKQQ"/>
+  </packagedElement>
+</uml:Profile>

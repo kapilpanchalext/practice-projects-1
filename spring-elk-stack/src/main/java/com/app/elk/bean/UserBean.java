@@ -1,0 +1,14 @@
+package com.app.elk.bean;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class UserBean {
+
+	private int id;
+	private String name;
+}

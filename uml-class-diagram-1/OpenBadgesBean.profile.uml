@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_JLZEkEiBEe6jKfRrnd84zw" name="OpenBadgesBean" metaclassReference="_JLa5wEiBEe6jKfRrnd84zw">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JLcH4EiBEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_JLcH4UiBEe6jKfRrnd84zw" name="OpenBadgesBean" nsURI="http:///schemas/OpenBadgesBean/_JLbg0kiBEe6jKfRrnd84zw/0" nsPrefix="OpenBadgesBean">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JLcu8EiBEe6jKfRrnd84zw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JLcu8UiBEe6jKfRrnd84zw" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JLcu8kiBEe6jKfRrnd84zw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JLcu80iBEe6jKfRrnd84zw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JLcu9EiBEe6jKfRrnd84zw" key="Date" value="9/1/23, 10:06 AM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_JLcu9UiBEe6jKfRrnd84zw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_JLcH4kiBEe6jKfRrnd84zw" name="bean">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_JLcH40iBEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_JLaSsEiBEe6jKfRrnd84zw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_JLcH5EiBEe6jKfRrnd84zw" name="base_Class" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Class"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_JLcH5kiBEe6jKfRrnd84zw" name="name" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_JLa5wEiBEe6jKfRrnd84zw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_JLaSsEiBEe6jKfRrnd84zw" name="bean">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JLbg0EiBEe6jKfRrnd84zw" name="base_Class" association="_JLa5wUiBEe6jKfRrnd84zw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Class"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_JLbg0UiBEe6jKfRrnd84zw" name="name">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_JLa5wUiBEe6jKfRrnd84zw" name="Class_bean" memberEnd="_JLa5wkiBEe6jKfRrnd84zw _JLbg0EiBEe6jKfRrnd84zw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_JLa5wkiBEe6jKfRrnd84zw" name="extension_bean" type="_JLaSsEiBEe6jKfRrnd84zw" aggregation="composite" association="_JLa5wUiBEe6jKfRrnd84zw"/>
+  </packagedElement>
+</uml:Profile>

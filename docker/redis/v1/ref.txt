@@ -1,0 +1,4 @@
+TODOMVC - https://www.youtube.com/watch?v=_gVYLzVrBHA&list=PL83Wfqi-zYZFw-5Q4YOzo6rv5Aeq26Ywx&index=1 (https://todomvc.com/)
+TODOBACKEND - https://todobackend.com/
+
+https://www.youtube.com/watch?v=9jyNDyvJ0N4&list=PL83Wfqi-zYZFw-5Q4YOzo6rv5Aeq26Ywx&index=2 9:30 react webapp inside springboot

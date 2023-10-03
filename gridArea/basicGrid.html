@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- https://mozilladevelopers.github.io/playground/css-grid/02-first-grid/ -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        display: grid;
+        width: 1920px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 450px 450px;
+        grid-gap: 1rem;
+      }
+
+      /* OTHER STYLES */
+      body {
+        background-color: #3b404e;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item {
+        background-color: #1eaafc;
+        background-image: linear-gradient(
+          130deg,
+          #6c52d9 0%,
+          #1eaafc 85%,
+          #3edfd7 100%
+        );
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+          0 6px 6px rgba(0, 0, 0, 0.23);
+        color: #fff;
+        border-radius: 4px;
+        border: 6px solid #171717;
+      }
+
+      .item:hover {
+        background-color: #ccc;
+        background-image: linear-gradient(
+          130deg,
+          #aca1d9 0%,
+          #0f405d 85%,
+          #085b57 100%
+        );
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item item1"></div>
+      <div class="item item2"></div>
+      <div class="item item3"></div>
+      <div class="item item4"></div>
+      <div class="item item5"></div>
+      <div class="item item6"></div>
+    </div>
+  </body>
+</html>

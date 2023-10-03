@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+
+<body>
+    <div>
+        <h1>Generator Function</h1>
+        <h2 id="genId" ></h2>
+        <input type="button" title="Click" onclick=onClickHandler()>Click</input>
+    </div>
+</body>
+
+<script>
+
+    var genElem = document.getElementById("genId");
+
+    function onClickHandler () {
+        function* idMaker(){
+            let index = 0;
+            while(true){
+                yield index++;
+            }
+        }
+    
+        const gen = idMaker();
+    
+        console.log();
+    
+    }
+</script>
+</html>

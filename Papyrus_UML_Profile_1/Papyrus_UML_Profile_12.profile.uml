@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_mcm9UEf8Ee6bqNkPpftvtg" name="Papyrus_UML_Profile_12">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BRTH0Uf9Ee6bqNkPpftvtg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_BRTu4Ef9Ee6bqNkPpftvtg" name="Papyrus_UML_Profile_12" nsURI="http:///schemas/Papyrus_UML_Profile_12/_BRTH0Ef9Ee6bqNkPpftvtg/0" nsPrefix="Papyrus_UML_Profile_12">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BRTu4Uf9Ee6bqNkPpftvtg" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BRTu4kf9Ee6bqNkPpftvtg" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BRTu40f9Ee6bqNkPpftvtg" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BRTu5Ef9Ee6bqNkPpftvtg" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BRTu5Uf9Ee6bqNkPpftvtg" key="Date" value="2023-08-31"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_BRTu5kf9Ee6bqNkPpftvtg" key="Author" value=""/>
+      </eAnnotations>
+    </contents>
+  </eAnnotations>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_me3nIEf8Ee6bqNkPpftvtg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_me3nIUf8Ee6bqNkPpftvtg">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_METAMODELS/UML.metamodel.uml#_0"/>
+  </packageImport>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_syZasEf8Ee6bqNkPpftvtg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_syb28Ef8Ee6bqNkPpftvtg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_INTERNAL_PROFILES/PapyrusInternal.profile.uml#_eikdoEBcEeKj6r7ThQagKA"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_INTERNAL_PROFILES/PapyrusInternal.profile.uml#_16oYAD-SEeKj6r7ThQagKA"/>
+  </profileApplication>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_sydsIEf8Ee6bqNkPpftvtg">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sydsIUf8Ee6bqNkPpftvtg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_INTERNAL_PROFILES/PapyrusInternal.profile.uml#_eijPgUBcEeKj6r7ThQagKA"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_INTERNAL_PROFILES/PapyrusInternal.profile.uml#_dL4lkPXAEeGSQON-DQ-5eg"/>
+  </profileApplication>
+</uml:Profile>

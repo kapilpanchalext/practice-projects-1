@@ -1,0 +1,36 @@
+server:
+  port: 9004
+
+spring:
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher  
+  datasource:
+    url: jdbc:mysql://localhost:3306/rediscacheexample?useUnicode=true&characterEncoding=UTF8&useSSL=false
+    username: root
+    password: admin
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        '[format_sql]': true
+    generate-ddl: true
+    
+  data:
+    redis:
+      database: 0
+      host: localhost
+      port: 6379
+      password:
+      pool:
+        max-active: 5
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+      timeout: 3000

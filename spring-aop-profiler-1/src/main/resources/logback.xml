@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+ 
+	<!-- ///////////////////////// --> 
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender"> 
+    	<encoder> 
+    		<pattern>%d{HH:mm:ss.SSS} [%thread] %highlight(%-5level) :: %highlight(%logger{36}) - %msg%n</pattern> 
+        </encoder>
+    </appender>
+     
+    <root level="info"> 
+        <appender-ref ref="STDOUT" /> 
+    </root> 
+	<!-- ///////////////////////// -->
+ 	
+	<appender name="logs_to_elastic" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+			<destination>127.0.0.1:5044</destination>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder"><timeZone>UTC</timeZone></encoder>       
+    </appender>
+   
+    <root level="info">
+    	<appender-ref ref="STDOUT" /> 
+        <appender-ref ref="logs_to_elastic" />
+    </root>
+
+</configuration>

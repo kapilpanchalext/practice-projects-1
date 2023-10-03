@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 8px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <div>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item" >
+      <button onclick={listItemAddHandler()}>Add item</button>
+    </div>
+
+    <ul>
+
+    </ul>
+
+    <script>
+	
+	const inputValue = document.querySelector('#item');
+	const ulListItem = document.querySelector('ul');	
+		const listItemAddHandler = () => {
+			
+			console.log(inputValue.value);
+			
+			const entry = document.createElement('li');			
+			const spanElement = document.createElement('span');
+			const deleteButton = document.createElement('button');
+			
+			entry.appendChild(spanElement);
+			spanElement.textContent=inputValue.value;
+			entry.appendChild(deleteButton);
+			deleteButton.textContent = 'Delete';
+			ulListItem.appendChild(entry);
+			
+			/*
+			ulListItem.appendChild(spanElement);
+			
+			entry.textContent = inputValue.value;
+			deleteButton.textContent = 'Delete';
+
+			ulListItem.appendChild(entry);
+			ulListItem.appendChild(spanElement);
+			
+			ulListItem.appendChild(deleteButton);*/
+			
+			deleteButton.addEventListener('click', () => {
+				console.log('Delete Button Event Handler');
+				ulListItem.removeChild(entry);
+			});
+			
+			inputValue.focus();
+		};
+		
+    </script>
+  </body>
+</html>

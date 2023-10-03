@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_XsxTAFL4Ee6vS5oSlbwpfw" name="microservice" metaclassReference="_Xs0WUFL4Ee6vS5oSlbwpfw">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xs-uYFL4Ee6vS5oSlbwpfw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_Xs-uYVL4Ee6vS5oSlbwpfw" name="microservice" nsURI="http:///schemas/microservice/_Xs8SIFL4Ee6vS5oSlbwpfw/0" nsPrefix="microservice">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_XtAjkVL4Ee6vS5oSlbwpfw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XtAjklL4Ee6vS5oSlbwpfw" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XtAjk1L4Ee6vS5oSlbwpfw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XtAjlFL4Ee6vS5oSlbwpfw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XtAjlVL4Ee6vS5oSlbwpfw" key="Date" value="9/14/23, 5:45 PM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_XtAjllL4Ee6vS5oSlbwpfw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_Xs-uYlL4Ee6vS5oSlbwpfw" name="microservice">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Xs-uY1L4Ee6vS5oSlbwpfw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_XsyhIFL4Ee6vS5oSlbwpfw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_Xs-uZFL4Ee6vS5oSlbwpfw" name="base_Component" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Component"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_Xs0WUFL4Ee6vS5oSlbwpfw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_XsyhIFL4Ee6vS5oSlbwpfw" name="microservice">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_Xs09YlL4Ee6vS5oSlbwpfw" name="base_Component" association="_Xs09YFL4Ee6vS5oSlbwpfw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Component"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_Xs09YFL4Ee6vS5oSlbwpfw" name="Component_microservice" memberEnd="_Xs09YVL4Ee6vS5oSlbwpfw _Xs09YlL4Ee6vS5oSlbwpfw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_Xs09YVL4Ee6vS5oSlbwpfw" name="extension_microservice" type="_XsyhIFL4Ee6vS5oSlbwpfw" aggregation="composite" association="_Xs09YFL4Ee6vS5oSlbwpfw"/>
+  </packagedElement>
+</uml:Profile>

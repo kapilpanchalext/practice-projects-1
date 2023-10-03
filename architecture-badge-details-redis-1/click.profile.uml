@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_55SiMFHxEe6-SJ2VOpFKQQ" name="click" metaclassReference="_55UXYFHxEe6-SJ2VOpFKQQ">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_55evcFHxEe6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_55evcVHxEe6-SJ2VOpFKQQ" name="click" nsURI="http:///schemas/click/_55dhUFHxEe6-SJ2VOpFKQQ/0" nsPrefix="click">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_55fWgVHxEe6-SJ2VOpFKQQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55fWglHxEe6-SJ2VOpFKQQ" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55fWg1HxEe6-SJ2VOpFKQQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55fWhFHxEe6-SJ2VOpFKQQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55fWhVHxEe6-SJ2VOpFKQQ" key="Date" value="9/13/23, 10:26 AM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55fWhlHxEe6-SJ2VOpFKQQ" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_55evclHxEe6-SJ2VOpFKQQ" name="click">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_55evc1HxEe6-SJ2VOpFKQQ" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_55TJQFHxEe6-SJ2VOpFKQQ"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_55evdFHxEe6-SJ2VOpFKQQ" name="base_Association" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Association"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_55UXYFHxEe6-SJ2VOpFKQQ">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_55TJQFHxEe6-SJ2VOpFKQQ" name="click">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_55U-clHxEe6-SJ2VOpFKQQ" name="base_Association" association="_55U-cFHxEe6-SJ2VOpFKQQ">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Association"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_55U-cFHxEe6-SJ2VOpFKQQ" name="Association_click" memberEnd="_55U-cVHxEe6-SJ2VOpFKQQ _55U-clHxEe6-SJ2VOpFKQQ">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_55U-cVHxEe6-SJ2VOpFKQQ" name="extension_click" type="_55TJQFHxEe6-SJ2VOpFKQQ" aggregation="composite" association="_55U-cFHxEe6-SJ2VOpFKQQ"/>
+  </packagedElement>
+</uml:Profile>

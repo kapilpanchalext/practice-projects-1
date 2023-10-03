@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Profile xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_o3a8AEiCEe6jKfRrnd84zw" name="api" metaclassReference="_o3cKIUiCEe6jKfRrnd84zw">
+  <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3dYQUiCEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+    <contents xmi:type="ecore:EPackage" xmi:id="_o3dYQkiCEe6jKfRrnd84zw" name="api" nsURI="http:///schemas/api/_o3dYQEiCEe6jKfRrnd84zw/0" nsPrefix="api">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3dYSkiCEe6jKfRrnd84zw" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3dYS0iCEe6jKfRrnd84zw" key="Version" value="0.0.1"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3dYTEiCEe6jKfRrnd84zw" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3dYTUiCEe6jKfRrnd84zw" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3dYTkiCEe6jKfRrnd84zw" key="Date" value="9/1/23, 10:17 AM"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_o3dYT0iCEe6jKfRrnd84zw" key="Author" value=""/>
+      </eAnnotations>
+      <eClassifiers xmi:type="ecore:EClass" xmi:id="_o3dYQ0iCEe6jKfRrnd84zw" name="authenticate">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_o3dYREiCEe6jKfRrnd84zw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_o3cKIEiCEe6jKfRrnd84zw"/>
+        <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_o3dYRUiCEe6jKfRrnd84zw" name="base_Operation" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Operation"/>
+        </eStructuralFeatures>
+        <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_o3dYR0iCEe6jKfRrnd84zw" name="student" ordered="false" lowerBound="1">
+          <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//String"/>
+        </eStructuralFeatures>
+      </eClassifiers>
+    </contents>
+  </eAnnotations>
+  <elementImport xmi:type="uml:ElementImport" xmi:id="_o3cKIUiCEe6jKfRrnd84zw">
+    <importedElement xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+  </elementImport>
+  <packagedElement xmi:type="uml:Stereotype" xmi:id="_o3cKIEiCEe6jKfRrnd84zw" name="authenticate">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_o3cxMkiCEe6jKfRrnd84zw" name="base_Operation" association="_o3cxMEiCEe6jKfRrnd84zw">
+      <type xmi:type="uml:Class" href="pathmap://UML_METAMODELS/UML.metamodel.uml#Operation"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_o3cxM0iCEe6jKfRrnd84zw" name="student">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Extension" xmi:id="_o3cxMEiCEe6jKfRrnd84zw" name="Operation_authenticate" memberEnd="_o3cxMUiCEe6jKfRrnd84zw _o3cxMkiCEe6jKfRrnd84zw">
+    <ownedEnd xmi:type="uml:ExtensionEnd" xmi:id="_o3cxMUiCEe6jKfRrnd84zw" name="extension_authenticate" type="_o3cKIEiCEe6jKfRrnd84zw" aggregation="composite" association="_o3cxMEiCEe6jKfRrnd84zw"/>
+  </packagedElement>
+</uml:Profile>

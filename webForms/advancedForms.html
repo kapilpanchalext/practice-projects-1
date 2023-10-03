@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+	<link href="payment-form.css" rel="stylesheet" />
+	
+	<style>
+
+		input {
+			appearance: none;
+		}
+		
+		input[type="search"] {
+			appearance: none;
+		}
+		
+		span {
+  display: inline-block;
+  background: red;
+}
+
+input[type="checkbox"] {
+  width: 100px;
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  
+  vertical-align: -2px;
+  
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+ 
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #ddd;
+  color: gray;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+select {
+  appearance: none;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: "▼";
+  font-size: 1rem;
+  top: 6px;
+  right: 10px;
+  position: absolute;
+}
+
+button,
+label,
+input,
+select,
+progress,
+meter {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+button {
+  width: 60%;
+  margin: 0 auto;
+}
+
+button,
+label,
+input,
+select,
+progress,
+meter {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input[type="text"],
+input[type="datetime-local"],
+input[type="color"],
+select {
+  box-shadow: inset 1px 1px 3px #ccc;
+  border-radius: 5px;
+}
+
+input[type="range"] {
+  appearance: none;
+  background: red;
+  height: 2px;
+  padding: 0;
+  outline: 1px solid transparent;
+}
+
+label[for="file"] {
+  box-shadow: 1px 1px 3px #ccc;
+  background: linear-gradient(to bottom, #eee, #ccc);
+  border: 1px solid rgb(169, 169, 169);
+  border-radius: 5px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+label[for="file"]:hover {
+  background: linear-gradient(to bottom, #fff, #ddd);
+}
+
+label[for="file"]:active {
+  box-shadow: inset 1px 1px 3px #ccc;
+}
+	</style>
+  </head>
+  
+  <body>	
+	<form>
+  <p>
+    <label for="search">search: </label>
+    <input id="search" name="search" type="search" />
+  </p>
+  <p>
+    <label for="text">text: </label>
+    <input id="text" name="text" type="text" />
+  </p>
+  <p>
+    <label for="date">date: </label>
+    <input id="date" name="date" type="datetime-local" />
+  </p>
+  <p>
+    <label for="radio">radio: </label>
+    <input id="radio" name="radio" type="radio" />
+  </p>
+  <p>
+    <label for="checkbox">checkbox: </label>
+    <input id="checkbox" name="checkbox" type="checkbox" />
+  </p>
+  <p><input type="submit" value="submit" /></p>
+  <p><input type="button" value="button" /></p>
+  
+  <label
+  ><span><input type="checkbox" name="q5" value="true" /></span> True</label
+>
+<label
+  ><span><input type="checkbox" name="q5" value="false" /></span> False</label
+>
+</form>
+
+<form>
+  <fieldset>
+    <legend>Fruit preferences</legend>
+
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="cherry" />
+        I like cherry
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="banana" disabled />
+        I can't like banana
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="strawberry" />
+        I like strawberry
+      </label>
+    </p>
+  </fieldset>
+</form>
+
+  </body>  
+</html>
