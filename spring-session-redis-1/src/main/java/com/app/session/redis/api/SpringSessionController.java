@@ -15,7 +15,6 @@ public class SpringSessionController {
 
 	@GetMapping(path = "/session")
 	public ResponseEntity<String> getHelloSession(@RequestParam String userId, HttpSession session){
-		
 		session.setAttribute("userId", userId);
 		String id = (String) session.getAttribute("userId");
 		return ResponseEntity.status(HttpStatus.OK).body("Hello From Session Controller: " + id);

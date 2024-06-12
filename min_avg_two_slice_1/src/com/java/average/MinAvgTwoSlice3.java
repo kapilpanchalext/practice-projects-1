@@ -1,0 +1,41 @@
+package com.java.average;
+
+import java.util.Arrays;
+
+public class MinAvgTwoSlice3 {
+	public static void main(String[] args) {
+//		int[] A = new int[]{4, 2, 2, 5, 1, 5, 8};
+		int[] A = new int[]{-3, -5, -8, -4, -10};
+		
+	    int[] prefixSum = new int[A.length];
+	    
+	    prefixSum[0] = A[0];
+	    
+	    for(int i=1; i<A.length; i++) {
+	    	prefixSum[i] = prefixSum[i-1] + A[i];
+	    }
+	    
+	    System.err.println("PREFIX SUM: " + Arrays.toString(prefixSum));
+	    
+	    double denominator = 2.0;
+	    double minVal = Double.MAX_VALUE;
+	    int indexMinVal = 0;
+	    
+	    for(int i=0; i<A.length-1; i++) {
+	    	denominator = 2.0;
+	    	for(int j=i+1; j<A.length; j++) {
+	    		double firstTerm = prefixSum[j];
+	    		double secondTerm = i == 0 ? 0 : prefixSum[i-1];
+	    		double val = (firstTerm	- secondTerm)/(denominator++);
+	    		System.err.println("VAL: " + val);
+	    		minVal = Math.min(minVal, val);
+	    		if(minVal == val) {
+	    			indexMinVal = i;
+	    		}
+	    	}
+	    }
+	    
+	    System.err.println("MINVAL: " + minVal);
+	    System.err.println("INDEXMINVAL: " + indexMinVal);
+	}
+}

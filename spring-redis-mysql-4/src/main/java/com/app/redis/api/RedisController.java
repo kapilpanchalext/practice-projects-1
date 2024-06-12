@@ -34,6 +34,7 @@ public class RedisController {
 	
 	@PostMapping(path = "/add")
 	public ResponseEntity<StudentBean> addStudentToRedis(@RequestBody StudentBean student){
+		System.err.println("ADD STUDENT TO REDIS: " + student);
 		StudentBean status = service.addStudentToRedis(student);
 		return ResponseEntity.status(HttpStatus.OK).body(status);
 	}

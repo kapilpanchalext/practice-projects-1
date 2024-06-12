@@ -25,20 +25,20 @@ public class RedisServiceImpl implements RedisService{
 //		String key = "firstName:lastName:age:gender:programName:" + student.getFirstName() + ":" + student.getLastName() + ":" + student.getAge() + ":"
 //		+ student.getGender() + ":" + student.getProgramName();
 		
-		String key = student.getFirstName() + ":" + student.getLastName() + ":" + student.getAge();
+//		String key = student.getFirstName() + ":" + student.getLastName() + ":" + student.getAge();
 		
-		String hashKey = "hashId:" + student.getStudentId().toString(); 
+//		String hashKey = "hashId:" + student.getStudentId().toString(); 
 				
-		repository.addToHashMap(key, hashKey, student);
+//		repository.addToHashMap(key, hashKey, student);
 //		repository.addToHashMap(hashKey, key, student);
 //		repository.addToSortedSet(hashKey, student.toString(), 1);
-//		StudentBean status = repo.save(student);
+		StudentBean status = repo.save(student);
 		
 		System.err.println("SAVE TO REDIS: " + student);		
 		
-		StudentBean status = (StudentBean) repository.getFromHashMap(hashKey, "");
+//		StudentBean status = (StudentBean) repository.getFromHashMap(hashKey, "");
 		
-		System.err.println("GET FROM REDIS: " + status);
+//		System.err.println("GET FROM REDIS: " + status);
 		
 //		List<StudentBean> statusObject = (List<StudentBean>) repo.findAll();
 //		
@@ -51,10 +51,10 @@ public class RedisServiceImpl implements RedisService{
 	public StudentBean getById(String id) {
 //		String hashKey = "hashId:" + id;
 		String hashKey = id;
-		StudentBean status = (StudentBean) repository.getFromHashMap(hashKey, "");
+//		StudentBean status = (StudentBean) repository.getFromHashMap(hashKey, "");
 		
-		System.err.println("GETBYID FROM REDIS : " + status);
-		return status;
+//		System.err.println("GETBYID FROM REDIS : " + status);
+		return null;
 	}
 
 	@Override

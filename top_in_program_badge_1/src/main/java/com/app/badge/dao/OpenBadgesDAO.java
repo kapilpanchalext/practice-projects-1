@@ -1,0 +1,149 @@
+package com.app.badge.dao;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.stereotype.Repository;
+import com.app.badge.bean.ExamRegistrationBean;
+import com.app.badge.bean.ExamScheduleBean;
+import com.app.badge.bean.MBAPassFail;
+import com.app.badge.bean.OpenBadgesTopInProgramDto;
+import com.app.badge.bean.StudentStudentPortalBean;
+import com.java.reader.ExamMBAPassFailDataFileReader;
+import com.java.reader.ExamRegistrationReader;
+import com.java.reader.ExamScheduleDataFileReader;
+import com.java.reader.ExamStudentsDataFileReader;
+
+@Repository
+public class OpenBadgesDAO {
+	
+	// Mocks Exam.Students List From Database - Complete List
+	private List<StudentStudentPortalBean> studentList;
+	
+	// Mocks Exam.ExamSchedule List - Complete List
+	private List<ExamScheduleBean> examScheduleBeanList;
+	
+	// Mocks Exam.MBA_PassFail
+	private List<MBAPassFail> mbaPassFailList;
+	
+	// Mocks Exam.Registration
+	private List<ExamRegistrationBean> examRegistrationBeanList;
+	
+	// Constructor
+	public OpenBadgesDAO() {
+		ExamStudentsDataFileReader studentsReader = new ExamStudentsDataFileReader();
+		studentList= studentsReader.readInputsFromFile("DataFiles\\ExamStudentData.txt"); //DataFiles\\ExamStudentData.txt
+		
+		ExamScheduleDataFileReader scheduleReader = new ExamScheduleDataFileReader();
+		examScheduleBeanList = scheduleReader.readInputsFromFile("DataFiles\\ExamScheduleData1.txt");
+		
+		ExamMBAPassFailDataFileReader passFailReader = new ExamMBAPassFailDataFileReader();
+		mbaPassFailList = passFailReader.readInputsFromFile("DataFiles\\MBAPassFailData1.txt");
+		
+		ExamRegistrationReader registrationReader = new ExamRegistrationReader();
+		examRegistrationBeanList = registrationReader.readInputsFromFile("DataFiles\\ExamRegistration1.txt");
+	}
+
+	public List<StudentStudentPortalBean> getMasterListForAllSapIdsForTopInProgramMBAWx(List<Integer> cpsIdList, String passoutMonth, int passoutYear){
+		List<StudentStudentPortalBean> programClearedSapIdList = new ArrayList<>();
+		for(StudentStudentPortalBean element : studentList) {
+			if( element.getProgramCleared().equalsIgnoreCase("Y")) {
+				programClearedSapIdList.add(element);
+			}
+		}
+		return programClearedSapIdList;
+	}
+	
+	public List<String> getFromExamStudentsTableSapIdsWhereProgramClearedIsYes(List<String> sapIdsMasterList, Map<Integer, Integer> cpsIdSemMap, String passoutMonth, int passoutYear) {
+		List<String> filteredSapIdsList = new ArrayList<>();
+		for(StudentStudentPortalBean outerElement : studentList) {
+			for(String innerElement : sapIdsMasterList) {
+				if(innerElement.equalsIgnoreCase(outerElement.getSapid()) && 
+						outerElement.getProgramCleared().equalsIgnoreCase("Y")) {
+					filteredSapIdsList.add(innerElement);
+				}
+			}
+		}
+		return filteredSapIdsList;
+	}
+		
+	public List<Integer> getScheduleIdsForIneligibleStudents(List<Integer> passScore) {
+		List<Integer> scheduleIdList = new ArrayList<>();
+		for(ExamScheduleBean element : examScheduleBeanList) {
+			if(passScore.contains(Integer.valueOf(element.getMax_score())) && 
+					!scheduleIdList.contains(element.getSchedule_id())) {				
+				scheduleIdList.add(element.getSchedule_id());
+			}
+		}
+//		return Arrays.asList(1721186, 1720859, 1719743, 1720148, 1721042, 1884540, 1889089, 1888750, 1888206, 1885559, 1885511, 1889090, 1884595, 1888752, 1888205, 2037961, 2037954, 2037965, 2037959, 2037967, 2038008, 2037973, 2038050, 2038060, 2038055, 2038189, 2038134, 2038154, 2038210, 2038252, 2038016, 2038290, 2038239, 2038291, 2038275, 2267583, 2267527, 2267554, 2267522, 2267542, 2267478, 2267563, 2267576, 2268656, 2268718, 2268544, 2268378, 2268569, 2268523, 2268313, 2268435, 2268332, 2268345, 2268575, 2268337, 2268407, 2268342, 2618061, 2618105, 2618240, 2618299, 2618340, 2618366, 2618384, 2618399, 2618483, 2618570, 2618523, 2618587, 2618604, 2618610, 2618633, 2618683, 2618712, 2618769, 2618784, 2618793, 2618810, 2618824, 2619134, 3493050, 3493639, 3492927, 3493688, 3493093, 3493257, 3493399, 3493518, 3493462, 3492984, 3493327, 3516607, 3516783, 3516683, 3516942, 3516854, 3516517, 3517919, 3517769, 3517901, 3517839, 3517951, 3550108, 3518074, 3518175, 3518232, 5208801, 5208404, 5208729, 5208588, 5208749, 5208429, 5208443, 5208619, 5208599, 5208651, 5208684, 5208693, 5208607, 5208818, 5208658, 5208517, 5208703, 5208718, 5211296, 5743775, 5743862, 5743801, 5797231, 5797232, 5797233, 5797272, 5797234, 5797264, 5797265, 5797266, 5797267, 5797268, 5797269, 5797356, 5797290, 5797291, 5797292, 5797293, 5797318, 5797319, 5797320, 5797321, 5797322, 5797357, 5797358, 5797359, 5797360, 5797361, 6486876, 6486907, 6487190, 6486924, 6486968, 6487215, 6541227, 6541431, 6541113, 6541424, 6541275, 6541237, 6541264, 6541465, 6541472, 6541412, 6541249, 6541482, 6541518, 6541634, 6541714, 6542299, 6541655, 6541725, 6542283, 6541684, 6542306, 6541642, 6541665, 6541701, 6542006, 6542274, 6542290, 6542310, 6542326, 6541625, 7198211, 7198225, 7198233, 7198120, 7198134, 7198139, 7198183, 7198064, 7198079, 7198113, 7235978, 7235979, 7236064, 7236065, 7235980, 7236124, 7235981, 7235982, 7236066, 7236067, 7236068, 7236069, 7236070, 7235983, 7236125, 7236071, 7235984, 7236072, 7236030, 7236031, 7236079, 7236080, 7236099, 7236100, 7236081, 7236101, 7236033, 7236034, 7236035, 7236036, 7236082, 7236083, 7236084, 7236085, 7236102, 7236103, 7236104, 7236105, 7236106, 7236037, 7236107, 7308402, 7308411, 7863063, 7863070, 7863075, 7863076, 7863064, 7863071, 7863077, 7863081, 7863072, 7863078, 7863065, 7863066, 7863079, 7863073, 7878679, 7878721, 7934243, 7934265, 7934244, 7934266, 7934245, 7934298, 7934246, 7934247, 7934267, 7934268, 7934270, 7934271, 7934248, 7934303, 7934272, 7934249, 7934273, 7934250, 7934274, 7934318, 7934340, 7934367, 7934319, 7934341, 7934368, 7934326, 7934347, 7934342, 7934369, 7934269, 7934320, 7934322, 7934323, 7934343, 7934344, 7934345, 7934346, 7934370, 7934371, 7934372, 7934373, 7934374, 7934324, 7934375, 7934321, 8563498, 8563556, 8625200, 8625114, 8625280, 8625302, 8625585, 8625359, 8625559, 8625404, 8625372, 8625381, 8689174, 8689182, 8690049, 8689693, 8689736, 8689699, 8689706, 8690017, 8690362, 8689659, 8690414, 8689028, 8690463, 8690376, 8690393, 8688970, 8690494, 8691218, 8691217, 8691222, 8691223, 8691220, 8691219, 8691221, 8691239, 8691237, 8691243, 8691240, 8691236, 8691242, 8691241, 8691244, 8691250, 8691248, 8691252, 8691253, 8691256, 8691249, 8691254, 8691251, 8691255, 9569290, 9569301, 9569441, 9593356, 9593323, 9593367, 9593374, 9593376, 9593346, 9593370, 9593373, 9593375, 9593377, 9593378, 9593366, 9593372, 9593382, 9593385, 9593386, 9593389, 9593381, 9593387, 9593388, 9593390, 9593380, 9628343, 9636182, 9636183, 9636184, 9636185, 9636181, 9636186, 9636187, 9636188, 9636301, 9636302, 9636303, 9636304, 9636305, 9636306, 9636307, 9636308, 9636309, 9636310, 9636368, 9636452, 9636487, 9636453, 9636454, 9636455, 9636456, 9636457, 9636458, 9636459, 9636577, 9636578, 9636579, 9636580, 9636581, 9636582, 9636583, 9636584, 9636585, 9636635, 9636636, 9636637, 9636638, 9636639, 9636694, 9636640, 9636641, 9636642, 9747149, 9747147, 9747145, 10461000, 10456625, 10460794, 10456626, 10460795, 10460999, 10456627, 10460796, 10456628, 10456629, 10460797, 10461002, 10456630, 10460798, 10456631, 10456632, 10460799, 10461003, 10486764, 10520248, 10520400, 10520378, 10520029, 10520249, 10520030, 10520032, 10520033, 10520250, 10520251, 10520252, 10520253, 10520254, 10520034, 10520035, 10520256, 10520036, 10520257, 10520546, 10520700, 10520864, 10520547, 10520701, 10520865, 10520702, 10520552, 10520706, 10520870, 10520872, 10520553, 10520549, 10520703, 10520867, 10520548, 10520866, 10520550, 10520704, 10520868, 10520707, 10520869, 10520871, 10520551, 10520705, 10520554, 10520708, 10520255, 10802340, 10802383, 10802501, 11531694, 11531659, 11531650, 11531636, 11531719, 11531712, 11531689, 11531684, 11531680, 11531663, 11607793, 11607670, 11607447, 11607521, 11607448, 11607520, 11607590, 11607290, 11607794, 11607296, 11607589, 11607456, 11607671, 11607291, 11607292, 11607293, 11607449, 11607450, 11607451, 11607452, 11607453, 11607294, 11607454, 11607295, 11607455, 11607591, 11607672, 11607795, 11607593, 11607594, 11607595, 11607596, 11607673, 11607674, 11607675, 11607676, 11607796, 11607797, 11607798, 11607799, 11607800, 11607678, 11607597, 11607801, 11607598, 11607679, 11739858, 11739824, 11739772, 12695065, 12695155, 12695208, 12695239, 12695299, 12695350, 12695404, 12695438, 12695495, 12695536, 12799251, 12799315, 12799414, 12799875, 12800139, 12800231, 12800240, 12800270, 12800321, 12800394, 12800396, 12800544, 12800553, 12800583, 12800669, 12800715, 12801047, 12801285, 12801319, 12801366, 12811145, 12811203, 12811239, 12811279, 12811330, 12811375, 12811400, 12811439, 12811441, 12811567, 12811601, 12811608, 12811689, 12811719, 12811726, 12811771, 12811788, 12811829, 12811869, 12811920, 12811968, 12811995, 12812014, 12812037, 12812085, 13038308, 13038322, 13038340, 13806263, 13806393, 13806443, 13806506, 13806513, 13806538, 13806561, 13806598, 13806630, 13806645, 13806671, 13806708, 13845358, 13845523, 13845578, 13845820, 13846144, 13849031, 13849041, 13849051, 13849073, 13849092, 13849093, 13849100, 13849143, 13849146, 13849175, 13849206, 13849208, 13849219, 13849285, 13849288, 13849317, 13849333, 13849743, 13849763, 13849796, 13849820, 13849840, 13849939, 13849946, 13849952, 13849970, 13849996, 13850045, 13850059, 13850072, 13850100, 13850164, 13850173, 13850188, 13850200, 13850203, 13850211, 13850218, 13850231, 13850321, 13850342, 13935192, 13935215, 13935230, 14444401, 14444624, 14444641, 14444664, 14539582, 14539629, 14539663, 14539695, 14539722, 14539730, 14539799, 14539817, 14539836, 14539857, 14539895, 14539921, 14539957, 14539975, 14540004, 14540104, 14540125, 14540247, 14540297, 14540384, 14545490, 14545524, 14545551, 14545587, 14545605, 14545606, 14545673, 14545753, 14545784, 14545823, 14545866, 14545869, 14545905, 14545963, 14545976, 14545987, 14546017, 14546063, 14546070, 14546099, 14546102, 14546113, 14546134, 14546173, 14546203, 14546230, 14575438, 14575448, 14575471, 14575484, 14575501, 14575506, 14575527, 14682628, 14682636, 14682650, 15274110, 15274206, 15274262, 15274294, 15274367, 15274445, 15274463, 15274477, 15274554, 15274586, 15323964, 15324093, 15324179, 15324289, 15324384, 15324446, 15324578, 15324637, 15324691, 15324739, 15324776, 15324811, 15324841, 15324870, 15324938, 15325019, 15325124, 15325203, 15325265, 15325345, 15330407, 15330457, 15330649, 15330778, 15330927, 15331308, 15331385, 15331482, 15331629, 15331677, 15331745, 15331790, 15331834, 15331918, 15332087, 15332119, 15332139, 15332171, 15332230, 15332261, 15332342, 15332462, 15332497, 15340564, 15340568, 15340586);
+		return scheduleIdList;
+	}
+	
+	public List<String> getIneligibleSapIds(List<Integer> scheduleIdList) {
+		List<String> ineligibleSapIdList = new ArrayList<>();
+		
+		for(MBAPassFail element : mbaPassFailList) {
+			if(scheduleIdList.contains(element.getSchedule_id()) && 
+					!ineligibleSapIdList.contains(element.getSapid())) {
+				ineligibleSapIdList.add(element.getSapid());
+			}
+		}
+		
+		return ineligibleSapIdList;
+	}
+	
+	public List<String> getSapIdsForPassoutStudentsExamRegistration(Map<Integer, Integer> cpsIdSemMap,
+			String passoutMonth, int passoutYear) {
+		
+		List<String> firstPassSapIds = new ArrayList<>();
+		
+		for(ExamRegistrationBean element: examRegistrationBeanList) {
+			if(element.getMonth().equalsIgnoreCase(passoutMonth) 
+					&& element.getYear() == passoutYear 
+					&& cpsIdSemMap.containsKey(element.getConsumerProgramStructureId())
+					&& cpsIdSemMap.containsValue(element.getSem())) {
+				firstPassSapIds.add(element.getSapid());
+			}
+		}
+		
+		return firstPassSapIds;
+	}
+	
+	public List<OpenBadgesTopInProgramDto> finalSapIdsWithMarks(List<StudentStudentPortalBean> fourthPassFilter){
+		List<OpenBadgesTopInProgramDto> marksList = new ArrayList<>();
+		for(StudentStudentPortalBean outerElement : fourthPassFilter) {
+			String sapid = "";
+			int outOfMarks = 0;
+			int totalMarks = 0;
+			OpenBadgesTopInProgramDto newList = new OpenBadgesTopInProgramDto();
+			
+			sapid = outerElement.getSapid();
+			for(MBAPassFail innerElement : mbaPassFailList) {
+				if(outerElement.getSapid().equalsIgnoreCase(innerElement.getSapid())) {
+					totalMarks += Integer.valueOf(innerElement.getIaScore()) + Integer.valueOf(innerElement.getTeeScore());
+					outOfMarks += 100;
+				}
+			}
+			
+			newList.setSapid(sapid);
+			newList.setTotalMarks(totalMarks);
+			newList.setOutOfMarks(outOfMarks);			
+			marksList.add(newList);
+		}
+		
+		return marksList;
+	}
+	
+	public List<StudentStudentPortalBean> getDataFromExamStudentsList(List<String> fourthPassFilter) {
+		List<StudentStudentPortalBean> listOfStudents = new ArrayList<>();
+		for(String outerElement : fourthPassFilter) {
+			for(StudentStudentPortalBean innerElement : studentList) {
+				if(outerElement.equalsIgnoreCase(innerElement.getSapid())) {
+					listOfStudents.add(innerElement);
+				}
+			}
+		}
+		return listOfStudents;
+	}
+}
