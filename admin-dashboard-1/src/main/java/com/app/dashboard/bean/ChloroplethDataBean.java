@@ -9,9 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class MonthlyDataBean {
+public class ChloroplethDataBean {
 	private String id;
-	private String month;
-	private int totalSales;
-	private int totalUnits;
+	private int value;
 }

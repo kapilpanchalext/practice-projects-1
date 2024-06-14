@@ -13,8 +13,10 @@ import lombok.NoArgsConstructor;
 public class DataProductStatBean {
 	private String id;
     private String productId;
+    private int totalCustomers;
     private int yearlySalesTotal;
     private int yearlyTotalSoldUnits;
+    private int year;
     private List<MonthlyDataBean> monthlyData;
     private List<DailyDataBean> dailyData;
 }

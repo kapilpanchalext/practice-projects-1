@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.app.dashboard.bean.DataProductStatBean;
+import com.app.dashboard.bean.DataTransactionBean;
 import com.app.dashboard.bean.ProductBean;
 import com.app.dashboard.bean.UserBean;
 import com.app.dashboard.dao.AdminDashboardDao;
@@ -25,5 +26,9 @@ public class UserService {
 
 	public List<DataProductStatBean> getProductStats() {
 		return dao.dataProductStat;
+	}
+	
+	public List<DataTransactionBean> getDataTransactions(){
+		return dao.dataTransactionList;
 	}
 }

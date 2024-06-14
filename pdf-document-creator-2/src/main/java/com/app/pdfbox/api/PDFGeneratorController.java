@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.pdfbox.DocumentBean;
+import com.app.pdfbox.TableOfContents;
 import com.app.pdfbox.pdf.PDFFrontPage;
 import com.app.pdfbox.pdf.PDFGenerator;
 
@@ -22,6 +23,9 @@ public class PDFGeneratorController {
 	
 	@Autowired
 	private PDFFrontPage pdfFront;
+	
+	@Autowired
+	private TableOfContents toc;
 
 	@GetMapping(path = "/hello-world")
 	private ResponseEntity<String> getHelloWorld(){
@@ -33,6 +37,7 @@ public class PDFGeneratorController {
 		
 //		pdf.generate(string);
 		pdfFront.createFrontPage(document);
+		toc.createTableOfContents();
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
