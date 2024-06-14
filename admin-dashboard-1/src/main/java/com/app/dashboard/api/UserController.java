@@ -1,5 +1,6 @@
 package com.app.dashboard.api;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.dashboard.bean.ChloroplethDataBean;
 import com.app.dashboard.bean.DataProductStatBean;
 import com.app.dashboard.bean.DataTransactionBean;
+import com.app.dashboard.bean.PlotCoordinates;
+import com.app.dashboard.bean.PlotDataBean;
 import com.app.dashboard.bean.ProductBean;
 import com.app.dashboard.bean.UserBean;
 import com.app.dashboard.pagination.Page;
@@ -32,7 +35,7 @@ public class UserController {
 	private UserService service;
     
 	@GetMapping(path = "/get-users")
-	ResponseEntity<List<UserBean>> getUsers(){
+	public ResponseEntity<List<UserBean>> getUsers(){
 		List<UserBean> users = service.getUsers();
 		
 		return ResponseEntity
@@ -41,7 +44,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-users-by-id")
-	ResponseEntity<UserBean> getUsersById(@RequestParam(name = "userId") String userId){
+	public ResponseEntity<UserBean> getUsersById(@RequestParam(name = "userId") String userId){
 		List<UserBean> users = service.getUsers();
 		
 		UserBean user = new UserBean();
@@ -58,7 +61,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-products")
-	ResponseEntity<List<ProductBean>> getProducts(){
+	public ResponseEntity<List<ProductBean>> getProducts(){
 		List<ProductBean> products = service.getProducts();
 		
 		return ResponseEntity
@@ -67,7 +70,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-products-stats")
-	ResponseEntity<List<DataProductStatBean>> getProductStats(){
+	public ResponseEntity<List<DataProductStatBean>> getProductStats(){
 		List<DataProductStatBean> productStats = service.getProductStats();
 		
 		return ResponseEntity
@@ -76,7 +79,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-transactions")
-	ResponseEntity<List<DataTransactionBean>> getTransactions(){
+	public ResponseEntity<List<DataTransactionBean>> getTransactions(){
 		List<DataTransactionBean> transactionList = service.getDataTransactions();
 		
 		return ResponseEntity
@@ -85,7 +88,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-transactions-pagination")
-	ResponseEntity<Page<DataTransactionBean>> getTransactionsPagination(
+	public ResponseEntity<Page<DataTransactionBean>> getTransactionsPagination(
 			@RequestParam(value = "page", defaultValue = "0") int page,
 	        @RequestParam(value = "size", defaultValue = "25") int size){
 		
@@ -99,7 +102,7 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-chloropleth-data")
-	ResponseEntity<List<ChloroplethDataBean>> getChloropleth(){
+	public ResponseEntity<List<ChloroplethDataBean>> getChloropleth(){
 		List<UserBean> transactionList = service.getUsers();
 		
 		// Step 1: Create a map to count occurrences of each country
@@ -121,11 +124,55 @@ public class UserController {
 	}
 	
 	@GetMapping(path = "/get-sales")
-	ResponseEntity<List<DataProductStatBean>> getOverallStats(){
+	public ResponseEntity<List<DataProductStatBean>> getOverallStats(){
 		List<DataProductStatBean> overallStatsList = service.getOverallStats();
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(overallStatsList);
+	}
+	
+	@GetMapping(path = "/get-sales-plot")
+	public ResponseEntity<PlotDataBean> getSalesPlotCoordinates(){
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		List<PlotCoordinates> plotDataList = new ArrayList<>();
+		PlotDataBean bean = new PlotDataBean();
+		
+		for(DataProductStatBean element : overallStatsList) {
+			int prefixSum = 0;
+			for(int i=0;i<element.getMonthlyData().size(); i++) {
+				PlotCoordinates coordinates = new PlotCoordinates();
+				prefixSum += element.getMonthlyData().get(i).getTotalSales(); 
+				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
+				coordinates.setY(prefixSum);
+				plotDataList.add(coordinates);
+			}
+		}
+		bean.setData(plotDataList);
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(bean);
+	}
+	
+	@GetMapping(path = "/get-units-plot")
+	public ResponseEntity<PlotDataBean> getUnitsPlotCoordinates(){
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		List<PlotCoordinates> plotDataList = new ArrayList<>();
+		PlotDataBean bean = new PlotDataBean();
+		
+		for(DataProductStatBean element : overallStatsList) {
+			int prefixSum = 0;
+			for(int i=0;i<element.getMonthlyData().size(); i++) {
+				PlotCoordinates coordinates = new PlotCoordinates();
+				prefixSum += element.getMonthlyData().get(i).getTotalUnits(); 
+				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
+				coordinates.setY(prefixSum);
+				plotDataList.add(coordinates);
+			}
+		}
+		bean.setData(plotDataList);
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(bean);
 	}
 }
