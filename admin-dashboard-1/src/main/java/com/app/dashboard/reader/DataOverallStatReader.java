@@ -5,8 +5,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
 import com.app.dashboard.bean.DailyDataBean;
 import com.app.dashboard.bean.DataProductStatBean;
 import com.app.dashboard.bean.MonthlyDataBean;
@@ -109,17 +109,13 @@ public class DataOverallStatReader {
     private MonthlyDataBean parseMonthlyData(String data) {
     	data = data.trim().replaceAll("[{}\"]", "");
     	String[] keyValuePairs = data.split(",");
-//    	System.err.println("KEYVALUE PAIRS: " + Arrays.toString(keyValuePairs));
     	MonthlyDataBean monthlyData = new MonthlyDataBean();
     	
         for (String pair : keyValuePairs) {
             String[] keyValue = pair.split(":");
-//            System.err.println("KEYVALUE: " + Arrays.toString(keyValue));
             if (keyValue.length == 2) {
                 String key = keyValue[0].trim().toLowerCase();
                 String value = keyValue[1].trim();
-//                System.err.println("KEY: " + key);
-//                System.err.println("VALUE: " + value);
                 switch (key) {
                     case "month":
                         monthlyData.setMonth(value);
@@ -136,7 +132,6 @@ public class DataOverallStatReader {
                 }
             }
         }
-        System.err.println("MONTHLY DATA: " + monthlyData);
         return monthlyData;
     }
 }

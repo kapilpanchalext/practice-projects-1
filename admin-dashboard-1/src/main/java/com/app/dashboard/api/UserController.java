@@ -119,4 +119,13 @@ public class UserController {
 				.status(HttpStatus.OK)
 				.body(chloroplethDataBeanList);
 	}
+	
+	@GetMapping(path = "/get-sales")
+	ResponseEntity<List<DataProductStatBean>> getOverallStats(){
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(overallStatsList);
+	}
 }

@@ -31,4 +31,8 @@ public class UserService {
 	public List<DataTransactionBean> getDataTransactions(){
 		return dao.dataTransactionList;
 	}
+	
+	public List<DataProductStatBean> getOverallStats(){
+		return dao.dataOverallStatsList;
+	}
 }

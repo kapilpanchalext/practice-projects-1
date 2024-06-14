@@ -37,6 +37,5 @@ public class AdminDashboardDao {
 	
 		DataOverallStatReader dataOverallStatReader = new DataOverallStatReader();
 		dataOverallStatsList = dataOverallStatReader.readInputsFromFile("datafile\\dataOverallStats.txt");
-		System.err.println(dataOverallStatsList);
 	}
 }
