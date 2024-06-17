@@ -134,7 +134,7 @@ public class UserController {
 				.body(overallStatsList);
 	}
 	
-	@GetMapping(path = "/get-sales-plot-monthly")
+	@GetMapping(path = "/get-sales-plot-overview")
 	public ResponseEntity<PlotDataBean> getSalesPlotCoordinates(){
 		List<DataProductStatBean> overallStatsList = service.getOverallStats();
 		List<PlotCoordinates> plotDataList = new ArrayList<>();
@@ -145,7 +145,8 @@ public class UserController {
 			for(int i=0;i<element.getMonthlyData().size(); i++) {
 				PlotCoordinates coordinates = new PlotCoordinates();
 				prefixSum += element.getMonthlyData().get(i).getTotalSales(); 
-				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
+//				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
+				coordinates.setX(i);
 				coordinates.setY(prefixSum);
 				plotDataList.add(coordinates);
 			}
@@ -156,7 +157,7 @@ public class UserController {
 				.body(bean);
 	}
 	
-	@GetMapping(path = "/get-units-plot-monthly")
+	@GetMapping(path = "/get-units-plot-overview")
 	public ResponseEntity<PlotDataBean> getUnitsPlotCoordinates(){
 		List<DataProductStatBean> overallStatsList = service.getOverallStats();
 		List<PlotCoordinates> plotDataList = new ArrayList<>();
@@ -166,8 +167,9 @@ public class UserController {
 			int prefixSum = 0;
 			for(int i=0;i<element.getMonthlyData().size(); i++) {
 				PlotCoordinates coordinates = new PlotCoordinates();
-				prefixSum += element.getMonthlyData().get(i).getTotalUnits(); 
-				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
+				prefixSum += element.getMonthlyData().get(i).getTotalUnits();
+//				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
+				coordinates.setX(i);
 				coordinates.setY(prefixSum);
 				plotDataList.add(coordinates);
 			}
@@ -200,7 +202,6 @@ public class UserController {
 		}
 		
 		bean.setData(plotDataList);
-		System.err.println(plotDataList.size());
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -229,7 +230,50 @@ public class UserController {
 		}
 		
 		bean.setData(plotDataList);
-		System.err.println(plotDataList.size());
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(bean);
+	}
+	
+	@GetMapping(path = "/get-sales-plot-monthly")
+	public ResponseEntity<PlotDataBean> getSalesMonthlyPlotCoordinates() {
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		List<PlotCoordinates> plotDataList = new ArrayList<>();
+		PlotDataBean bean = new PlotDataBean();
+		
+		for(DataProductStatBean element : overallStatsList) {
+			for(int i=0;i<element.getMonthlyData().size(); i++) {
+				PlotCoordinates coordinates = new PlotCoordinates();
+				coordinates.setX(i);
+				coordinates.setY(element.getMonthlyData().get(i).getTotalSales());
+				plotDataList.add(coordinates);
+			}
+		}
+		
+		bean.setData(plotDataList);
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(bean);
+	}
+	
+	@GetMapping(path = "/get-units-plot-monthly")
+	public ResponseEntity<PlotDataBean> getUnitsMonthlyPlotCoordinates() {
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		List<PlotCoordinates> plotDataList = new ArrayList<>();
+		PlotDataBean bean = new PlotDataBean();
+		
+		for(DataProductStatBean element : overallStatsList) {
+			for(int i=0;i<element.getMonthlyData().size(); i++) {
+				PlotCoordinates coordinates = new PlotCoordinates();
+				coordinates.setX(i);
+				coordinates.setY(element.getMonthlyData().get(i).getTotalUnits());
+				plotDataList.add(coordinates);
+			}
+		}
+		
+		bean.setData(plotDataList);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
