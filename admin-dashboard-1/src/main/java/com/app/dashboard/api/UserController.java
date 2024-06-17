@@ -1,5 +1,7 @@
 package com.app.dashboard.api;
 
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -132,7 +134,7 @@ public class UserController {
 				.body(overallStatsList);
 	}
 	
-	@GetMapping(path = "/get-sales-plot")
+	@GetMapping(path = "/get-sales-plot-monthly")
 	public ResponseEntity<PlotDataBean> getSalesPlotCoordinates(){
 		List<DataProductStatBean> overallStatsList = service.getOverallStats();
 		List<PlotCoordinates> plotDataList = new ArrayList<>();
@@ -154,7 +156,7 @@ public class UserController {
 				.body(bean);
 	}
 	
-	@GetMapping(path = "/get-units-plot")
+	@GetMapping(path = "/get-units-plot-monthly")
 	public ResponseEntity<PlotDataBean> getUnitsPlotCoordinates(){
 		List<DataProductStatBean> overallStatsList = service.getOverallStats();
 		List<PlotCoordinates> plotDataList = new ArrayList<>();
@@ -171,6 +173,64 @@ public class UserController {
 			}
 		}
 		bean.setData(plotDataList);
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(bean);
+	}
+	
+	@GetMapping(path = "/get-sales-plot-daily")
+	public ResponseEntity<PlotDataBean> getSalesDailyPlotCoordinates(
+			@RequestParam(name = "startDate") long startDate, 
+			@RequestParam(name = "endDate") long endDate) {
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		List<PlotCoordinates> plotDataList = new ArrayList<>();
+		PlotDataBean bean = new PlotDataBean();
+		
+		for(DataProductStatBean element : overallStatsList) {
+			for(int i=0;i<element.getDailyData().size(); i++) {
+				PlotCoordinates coordinates = new PlotCoordinates();
+				LocalDateTime localDateTime = element.getDailyData().get(i).getDate().atStartOfDay();
+				long timeVal = localDateTime.toInstant(ZoneOffset.UTC).toEpochMilli();
+				coordinates.setX(timeVal);
+				coordinates.setY(element.getDailyData().get(i).getTotalSales());
+				if(timeVal> startDate && timeVal<endDate) {
+					plotDataList.add(coordinates);
+				}
+			}
+		}
+		
+		bean.setData(plotDataList);
+		System.err.println(plotDataList.size());
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(bean);
+	}
+	
+	@GetMapping(path = "/get-units-plot-daily")
+	public ResponseEntity<PlotDataBean> getUnitsDailyPlotCoordinates(
+			@RequestParam(name = "startDate") long startDate, 
+			@RequestParam(name = "endDate") long endDate) {
+		List<DataProductStatBean> overallStatsList = service.getOverallStats();
+		List<PlotCoordinates> plotDataList = new ArrayList<>();
+		PlotDataBean bean = new PlotDataBean();
+		
+		for(DataProductStatBean element : overallStatsList) {
+			for(int i=0;i<element.getDailyData().size(); i++) {
+				PlotCoordinates coordinates = new PlotCoordinates();
+				LocalDateTime localDateTime = element.getDailyData().get(i).getDate().atStartOfDay();
+				long timeVal = localDateTime.toInstant(ZoneOffset.UTC).toEpochMilli();
+				coordinates.setX(timeVal);
+				coordinates.setY(element.getDailyData().get(i).getTotalUnits());
+				if(timeVal> startDate && timeVal<endDate) {
+					plotDataList.add(coordinates);
+				}
+			}
+		}
+		
+		bean.setData(plotDataList);
+		System.err.println(plotDataList.size());
+		
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(bean);

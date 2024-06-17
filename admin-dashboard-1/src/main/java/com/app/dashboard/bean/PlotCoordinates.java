@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class PlotCoordinates {
-	private double x;
-	private double y;
+	private long x;
+	private long y;
 	private String xString;
 }
