@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.app.dashboard.bean.DataProductStatBean;
 import com.app.dashboard.bean.DataTransactionBean;
 import com.app.dashboard.bean.ProductBean;
+import com.app.dashboard.bean.SalesByCategoryBean;
 import com.app.dashboard.bean.UserBean;
 import com.app.dashboard.dao.AdminDashboardDao;
 
@@ -34,5 +35,9 @@ public class UserService {
 	
 	public List<DataProductStatBean> getOverallStats(){
 		return dao.dataOverallStatsList;
+	}
+	
+	public List<SalesByCategoryBean> getSalesByCategory(){
+		return dao.salesByCategoryList;
 	}
 }

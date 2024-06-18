@@ -23,6 +23,7 @@ import com.app.dashboard.bean.DataTransactionBean;
 import com.app.dashboard.bean.PlotCoordinates;
 import com.app.dashboard.bean.PlotDataBean;
 import com.app.dashboard.bean.ProductBean;
+import com.app.dashboard.bean.SalesByCategoryBean;
 import com.app.dashboard.bean.UserBean;
 import com.app.dashboard.pagination.Page;
 import com.app.dashboard.service.UserService;
@@ -145,7 +146,6 @@ public class UserController {
 			for(int i=0;i<element.getMonthlyData().size(); i++) {
 				PlotCoordinates coordinates = new PlotCoordinates();
 				prefixSum += element.getMonthlyData().get(i).getTotalSales(); 
-//				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
 				coordinates.setX(i);
 				coordinates.setY(prefixSum);
 				plotDataList.add(coordinates);
@@ -168,7 +168,6 @@ public class UserController {
 			for(int i=0;i<element.getMonthlyData().size(); i++) {
 				PlotCoordinates coordinates = new PlotCoordinates();
 				prefixSum += element.getMonthlyData().get(i).getTotalUnits();
-//				coordinates.setXString(element.getMonthlyData().get(i).getMonth());
 				coordinates.setX(i);
 				coordinates.setY(prefixSum);
 				plotDataList.add(coordinates);
@@ -278,5 +277,15 @@ public class UserController {
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(bean);
+	}
+	
+	@GetMapping(path = "/get-sales-by-category")
+	public ResponseEntity<List<SalesByCategoryBean>> getSalesByCategory() {
+		
+		List<SalesByCategoryBean> salesByCategory = service.getSalesByCategory();
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(salesByCategory);
 	}
 }

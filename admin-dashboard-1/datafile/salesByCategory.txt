@@ -1,0 +1,6 @@
+{
+  shoes: 6515,
+  clothing: 22803,
+  accessories: 16288,
+  misc: 19545,
+},
