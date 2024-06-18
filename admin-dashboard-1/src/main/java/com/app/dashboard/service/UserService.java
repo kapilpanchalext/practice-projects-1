@@ -18,15 +18,15 @@ public class UserService {
 	private AdminDashboardDao dao;
 	
 	public List<UserBean> getUsers() {
-		return dao.users;	
+		return dao.usersList;	
 	}
 	
 	public List<ProductBean> getProducts(){
-		return dao.products;
+		return dao.productsList;
 	}
 
 	public List<DataProductStatBean> getProductStats() {
-		return dao.dataProductStat;
+		return dao.dataProductStatList;
 	}
 	
 	public List<DataTransactionBean> getDataTransactions(){

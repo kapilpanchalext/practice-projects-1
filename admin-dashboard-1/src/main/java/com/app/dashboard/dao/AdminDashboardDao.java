@@ -18,22 +18,22 @@ import com.app.dashboard.reader.UserReader;
 
 @Repository
 public class AdminDashboardDao {
-	public List<UserBean> users = new ArrayList<>();
-	public List<ProductBean> products = new ArrayList<>();
-	public List<DataProductStatBean> dataProductStat = new ArrayList<>();
+	public List<UserBean> usersList = new ArrayList<>();
+	public List<ProductBean> productsList = new ArrayList<>();
+	public List<DataProductStatBean> dataProductStatList = new ArrayList<>();
 	public List<DataTransactionBean> dataTransactionList = new ArrayList<>();
 	public List<DataProductStatBean> dataOverallStatsList = new ArrayList<>();
 	public List<SalesByCategoryBean> salesByCategoryList = new ArrayList<>();
 
 	private AdminDashboardDao() {
 		UserReader userReader = new UserReader();
-		users = userReader.readInputsFromFile("datafile\\users.txt");
+		usersList = userReader.readInputsFromFile("datafile\\users.txt");
 
 		ProductReader productReader = new ProductReader();
-		products = productReader.readInputsFromFile("datafile\\product.txt");
+		productsList = productReader.readInputsFromFile("datafile\\product.txt");
 
 		DataProductStatReader dataProductStatReader = new DataProductStatReader();
-		dataProductStat = dataProductStatReader.readInputsFromFile("datafile\\dataproductstat.txt");
+		dataProductStatList = dataProductStatReader.readInputsFromFile("datafile\\dataproductstat.txt");
 
 		DataTransactionReader dataTransactionReader = new DataTransactionReader();
 		dataTransactionList = dataTransactionReader.readInputsFromFile("datafile\\dataTransactions.txt");

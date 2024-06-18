@@ -74,11 +74,11 @@ public class UserController {
 	
 	@GetMapping(path = "/get-products-stats")
 	public ResponseEntity<List<DataProductStatBean>> getProductStats(){
-		List<DataProductStatBean> productStats = service.getProductStats();
+		List<DataProductStatBean> productStatsList = service.getProductStats();
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
-				.body(productStats);
+				.body(productStatsList);
 	}
 	
 	@GetMapping(path = "/get-transactions")
