@@ -1,12 +1,6 @@
 package com.app.dashboard.api;
 
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,11 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.dashboard.bean.AffiliateStatBean;
 import com.app.dashboard.bean.ChloroplethDataBean;
 import com.app.dashboard.bean.DataProductStatBean;
 import com.app.dashboard.bean.DataTransactionBean;
-import com.app.dashboard.bean.PlotCoordinates;
 import com.app.dashboard.bean.PlotDataBean;
 import com.app.dashboard.bean.ProductBean;
 import com.app.dashboard.bean.SalesByCategoryBean;
@@ -29,7 +21,6 @@ import com.app.dashboard.bean.UserBean;
 import com.app.dashboard.bean.UserProductStatsBean;
 import com.app.dashboard.pagination.Page;
 import com.app.dashboard.service.UserService;
-import com.app.dashboard.util.PaginationUtil;
 
 @RestController
 @RequestMapping(path = "/api/v1")
@@ -50,15 +41,7 @@ public class UserController {
 	
 	@GetMapping(path = "/get-users-by-id")
 	public ResponseEntity<UserBean> getUsersById(@RequestParam(name = "userId") String userId){
-		List<UserBean> users = service.getUsers();
-		
-		UserBean user = new UserBean();
-		
-		for(UserBean element : users) {
-			if(element.getId().equalsIgnoreCase(userId)) {
-				user = element;
-			}
-		}
+		UserBean user = service.getUserById(userId);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -96,10 +79,7 @@ public class UserController {
 	public ResponseEntity<Page<DataTransactionBean>> getTransactionsPagination(
 			@RequestParam(value = "page", defaultValue = "0") int page,
 	        @RequestParam(value = "size", defaultValue = "25") int size){
-		
-		List<DataTransactionBean> transactionList = service.getDataTransactions();
-		
-		Page<DataTransactionBean> pagedList = PaginationUtil.convertListToPage(transactionList, page, size);
+		Page<DataTransactionBean> pagedList = service.getTransactionsPagination(page, size);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -108,20 +88,7 @@ public class UserController {
 	
 	@GetMapping(path = "/get-chloropleth-data")
 	public ResponseEntity<List<ChloroplethDataBean>> getChloropleth(){
-		List<UserBean> transactionList = service.getUsers();
-		
-		// Step 1: Create a map to count occurrences of each country
-        Map<String, Integer> countryCountMap = new HashMap<>();
-
-        for (UserBean element : transactionList) {
-            String country = element.getCountry();
-            countryCountMap.put(country, countryCountMap.getOrDefault(country, 0) + 1);
-        }
-
-        // Step 2: Create ChloroplethDataBean list using the map
-        List<ChloroplethDataBean> chloroplethDataBeanList = transactionList.stream()
-                .map(country -> new ChloroplethDataBean(country.getCountry(), countryCountMap.getOrDefault(country.getCountry(), 0)))
-                .collect(Collectors.toList());
+        List<ChloroplethDataBean> chloroplethDataBeanList = service.getChloroplethData();
 
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -139,21 +106,8 @@ public class UserController {
 	
 	@GetMapping(path = "/get-sales-plot-overview")
 	public ResponseEntity<PlotDataBean> getSalesPlotCoordinates(){
-		List<DataProductStatBean> overallStatsList = service.getOverallStats();
-		List<PlotCoordinates> plotDataList = new ArrayList<>();
-		PlotDataBean bean = new PlotDataBean();
+		PlotDataBean bean = service.getSalesPlotCoordinates();
 		
-		for(DataProductStatBean element : overallStatsList) {
-			int prefixSum = 0;
-			for(int i=0;i<element.getMonthlyData().size(); i++) {
-				PlotCoordinates coordinates = new PlotCoordinates();
-				prefixSum += element.getMonthlyData().get(i).getTotalSales(); 
-				coordinates.setX(i);
-				coordinates.setY(prefixSum);
-				plotDataList.add(coordinates);
-			}
-		}
-		bean.setData(plotDataList);
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(bean);
@@ -161,21 +115,8 @@ public class UserController {
 	
 	@GetMapping(path = "/get-units-plot-overview")
 	public ResponseEntity<PlotDataBean> getUnitsPlotCoordinates(){
-		List<DataProductStatBean> overallStatsList = service.getOverallStats();
-		List<PlotCoordinates> plotDataList = new ArrayList<>();
-		PlotDataBean bean = new PlotDataBean();
+		PlotDataBean bean = service.getUnitsPlotCoordinates();
 		
-		for(DataProductStatBean element : overallStatsList) {
-			int prefixSum = 0;
-			for(int i=0;i<element.getMonthlyData().size(); i++) {
-				PlotCoordinates coordinates = new PlotCoordinates();
-				prefixSum += element.getMonthlyData().get(i).getTotalUnits();
-				coordinates.setX(i);
-				coordinates.setY(prefixSum);
-				plotDataList.add(coordinates);
-			}
-		}
-		bean.setData(plotDataList);
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(bean);
@@ -185,24 +126,7 @@ public class UserController {
 	public ResponseEntity<PlotDataBean> getSalesDailyPlotCoordinates(
 			@RequestParam(name = "startDate") long startDate, 
 			@RequestParam(name = "endDate") long endDate) {
-		List<DataProductStatBean> overallStatsList = service.getOverallStats();
-		List<PlotCoordinates> plotDataList = new ArrayList<>();
-		PlotDataBean bean = new PlotDataBean();
-		
-		for(DataProductStatBean element : overallStatsList) {
-			for(int i=0;i<element.getDailyData().size(); i++) {
-				PlotCoordinates coordinates = new PlotCoordinates();
-				LocalDateTime localDateTime = element.getDailyData().get(i).getDate().atStartOfDay();
-				long timeVal = localDateTime.toInstant(ZoneOffset.UTC).toEpochMilli();
-				coordinates.setX(timeVal);
-				coordinates.setY(element.getDailyData().get(i).getTotalSales());
-				if(timeVal> startDate && timeVal<endDate) {
-					plotDataList.add(coordinates);
-				}
-			}
-		}
-		
-		bean.setData(plotDataList);
+		PlotDataBean bean = service.getSalesDailyPlotCoordinates(startDate, endDate);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -213,24 +137,7 @@ public class UserController {
 	public ResponseEntity<PlotDataBean> getUnitsDailyPlotCoordinates(
 			@RequestParam(name = "startDate") long startDate, 
 			@RequestParam(name = "endDate") long endDate) {
-		List<DataProductStatBean> overallStatsList = service.getOverallStats();
-		List<PlotCoordinates> plotDataList = new ArrayList<>();
-		PlotDataBean bean = new PlotDataBean();
-		
-		for(DataProductStatBean element : overallStatsList) {
-			for(int i=0;i<element.getDailyData().size(); i++) {
-				PlotCoordinates coordinates = new PlotCoordinates();
-				LocalDateTime localDateTime = element.getDailyData().get(i).getDate().atStartOfDay();
-				long timeVal = localDateTime.toInstant(ZoneOffset.UTC).toEpochMilli();
-				coordinates.setX(timeVal);
-				coordinates.setY(element.getDailyData().get(i).getTotalUnits());
-				if(timeVal> startDate && timeVal<endDate) {
-					plotDataList.add(coordinates);
-				}
-			}
-		}
-		
-		bean.setData(plotDataList);
+		PlotDataBean bean = service.getUnitsDailyPlotCoordinates(startDate, endDate);
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -239,20 +146,7 @@ public class UserController {
 	
 	@GetMapping(path = "/get-sales-plot-monthly")
 	public ResponseEntity<PlotDataBean> getSalesMonthlyPlotCoordinates() {
-		List<DataProductStatBean> overallStatsList = service.getOverallStats();
-		List<PlotCoordinates> plotDataList = new ArrayList<>();
-		PlotDataBean bean = new PlotDataBean();
-		
-		for(DataProductStatBean element : overallStatsList) {
-			for(int i=0;i<element.getMonthlyData().size(); i++) {
-				PlotCoordinates coordinates = new PlotCoordinates();
-				coordinates.setX(i);
-				coordinates.setY(element.getMonthlyData().get(i).getTotalSales());
-				plotDataList.add(coordinates);
-			}
-		}
-		
-		bean.setData(plotDataList);
+		PlotDataBean bean = service.getSalesMonthlyPlotCoordinates();
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -261,20 +155,7 @@ public class UserController {
 	
 	@GetMapping(path = "/get-units-plot-monthly")
 	public ResponseEntity<PlotDataBean> getUnitsMonthlyPlotCoordinates() {
-		List<DataProductStatBean> overallStatsList = service.getOverallStats();
-		List<PlotCoordinates> plotDataList = new ArrayList<>();
-		PlotDataBean bean = new PlotDataBean();
-		
-		for(DataProductStatBean element : overallStatsList) {
-			for(int i=0;i<element.getMonthlyData().size(); i++) {
-				PlotCoordinates coordinates = new PlotCoordinates();
-				coordinates.setX(i);
-				coordinates.setY(element.getMonthlyData().get(i).getTotalUnits());
-				plotDataList.add(coordinates);
-			}
-		}
-		
-		bean.setData(plotDataList);
+		PlotDataBean bean = service.getUnitsMonthlyPlotCoordinates();
 		
 		return ResponseEntity
 				.status(HttpStatus.OK)
@@ -283,7 +164,6 @@ public class UserController {
 	
 	@GetMapping(path = "/get-sales-by-category")
 	public ResponseEntity<List<SalesByCategoryBean>> getSalesByCategory() {
-		
 		List<SalesByCategoryBean> salesByCategory = service.getSalesByCategory();
 		
 		return ResponseEntity
@@ -293,7 +173,6 @@ public class UserController {
 	
 	@GetMapping(path = "/get-affiliate-sales")
 	public ResponseEntity<List<UserProductStatsBean>> getAffiliateSales() {
-		
 		List<UserProductStatsBean> affiliateStats = service.getAffiliateSales();
 		
 		return ResponseEntity
