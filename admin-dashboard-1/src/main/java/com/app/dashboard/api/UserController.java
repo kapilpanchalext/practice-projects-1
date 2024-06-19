@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.dashboard.bean.AffiliateStatBean;
 import com.app.dashboard.bean.ChloroplethDataBean;
 import com.app.dashboard.bean.DataProductStatBean;
 import com.app.dashboard.bean.DataTransactionBean;
@@ -25,6 +26,7 @@ import com.app.dashboard.bean.PlotDataBean;
 import com.app.dashboard.bean.ProductBean;
 import com.app.dashboard.bean.SalesByCategoryBean;
 import com.app.dashboard.bean.UserBean;
+import com.app.dashboard.bean.UserProductStatsBean;
 import com.app.dashboard.pagination.Page;
 import com.app.dashboard.service.UserService;
 import com.app.dashboard.util.PaginationUtil;
@@ -287,5 +289,15 @@ public class UserController {
 		return ResponseEntity
 				.status(HttpStatus.OK)
 				.body(salesByCategory);
+	}
+	
+	@GetMapping(path = "/get-affiliate-sales")
+	public ResponseEntity<List<UserProductStatsBean>> getAffiliateSales() {
+		
+		List<UserProductStatsBean> affiliateStats = service.getAffiliateSales();
+		
+		return ResponseEntity
+				.status(HttpStatus.OK)
+				.body(affiliateStats);
 	}
 }
