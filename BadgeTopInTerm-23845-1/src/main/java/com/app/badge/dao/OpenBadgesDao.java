@@ -1,10 +1,10 @@
 package com.app.badge.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
+import java.util.Map;
 import org.springframework.stereotype.Repository;
-
 import com.app.badge.bean.OpenBadgeBean;
 import com.app.badge.bean.OpenBadgeCriteriaBean;
 import com.app.badge.reader.BadgeCriteriaParamReader;
@@ -18,7 +18,14 @@ public class OpenBadgesDao {
 	List<OpenBadgeCriteriaBean> badgesCriteriaList = new ArrayList<>();
 	List<OpenBadgeCriteriaBean> badgesCriteriaParamList = new ArrayList<>();
 	
+	Map<Integer, Integer> CPSIDMap = new HashMap<>();
+	
 	public OpenBadgesDao() {
+		
+		CPSIDMap.put(111, 111);
+		CPSIDMap.put(151, 151);
+		CPSIDMap.put(160, 160);
+		
 		BadgesReader badgesReader = new BadgesReader();
 		badgesList = badgesReader.readInputsFromFile("dataFile\\DataFile_Badges_V1.txt");
 		
@@ -39,5 +46,9 @@ public class OpenBadgesDao {
 	
 	public List<OpenBadgeCriteriaBean> getAllBadgesCriteriaParamList () {
 		return badgesCriteriaParamList;
+	}
+	
+	public Map<Integer, Integer> getConsumerProgramStructureIdsMBAWX (){
+		return CPSIDMap;
 	}
 }

@@ -2,6 +2,7 @@ package com.app.badge.api;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -68,12 +69,21 @@ public class OpenBadgesController {
 	public ResponseEntity<List<OpenBadgeCriteriaBean>> getCriteriaDetails(
 						@RequestParam(name = "termTopper") String termTopper){
 		
-		System.err.println(termTopper);
-		
 		List<OpenBadgeCriteriaBean> getCriteriaDetails = service.getCriteriaDetails(termTopper);
 		
 		return ResponseEntity
 					.status(HttpStatus.OK)
 					.body(getCriteriaDetails);
+	}
+	
+	//STEP 2: Get consumerProgramStructure Ids
+	@GetMapping(path = "/getConsumerProgramStructureId")
+	public ResponseEntity<Map<Integer, Integer>> getConsumerProgramStructure(){
+		
+		Map<Integer, Integer> consumerProgramStructureIdMap = service.getConsumerProgramStructureIdsMBAWX();
+		
+		return ResponseEntity
+					.status(HttpStatus.OK)
+					.body(consumerProgramStructureIdMap);
 	}
 }
