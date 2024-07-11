@@ -1,9 +1,9 @@
 package com.app.badge.api;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
-
+import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.app.badge.bean.OpenBadgeBean;
 import com.app.badge.bean.OpenBadgeCriteriaBean;
+import com.app.badge.bean.OpenBadgesUsersBean;
 import com.app.badge.service.OpenBadgesService;
 
 @RestController
@@ -76,14 +76,17 @@ public class OpenBadgesController {
 					.body(getCriteriaDetails);
 	}
 	
-	//STEP 2: Get consumerProgramStructure Ids
+//	STEP 2: Get consumerProgramStructure Ids
 	@GetMapping(path = "/getConsumerProgramStructureId")
-	public ResponseEntity<Map<Integer, Integer>> getConsumerProgramStructure(){
+	public ResponseEntity<List<Integer>> getConsumerProgramStructure(){
 		
-		Map<Integer, Integer> consumerProgramStructureIdMap = service.getConsumerProgramStructureIdsMBAWX();
+		List<Integer> cpsIdList = service.getConsumerProgramStructure("topInTerm");
 		
 		return ResponseEntity
 					.status(HttpStatus.OK)
-					.body(consumerProgramStructureIdMap);
+					.body(cpsIdList);
 	}
+	
+	// STEP 3: Get SemesterList for TopInTermBadge
+	
 }
