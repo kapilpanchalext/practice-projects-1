@@ -1,5 +1,6 @@
 package com.app.badge.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,5 +22,33 @@ public class OpenBadgesService {
 	
 	public List<OpenBadgeCriteriaBean> getAllBadgesCriteriaList () {
 		return dao.getAllBadgesCriteriaList();
+	}
+	
+	public List<OpenBadgeCriteriaBean> getAllBadgesCriteriaParamList () {
+		return dao.getAllBadgesCriteriaParamList();
+	}
+	
+	public List<OpenBadgeCriteriaBean> getCriteriaDetails(String termTopper){
+		List<OpenBadgeCriteriaBean> badgesCriteriaList = dao.getAllBadgesCriteriaList();
+		List<OpenBadgeCriteriaBean> badgesCriteriaParamList = dao.getAllBadgesCriteriaParamList();
+		
+		List<OpenBadgeCriteriaBean> badgesCriteriaDetails = new ArrayList<>();
+		
+		for(OpenBadgeCriteriaBean element : badgesCriteriaParamList) {
+			if(element.getCriteriaName().equalsIgnoreCase(termTopper)) {
+				badgesCriteriaDetails.add(element);
+			}
+		}
+		
+		// Adding BadgeIds to badgesCriteriaDetails bean List
+		for(OpenBadgeCriteriaBean outerElement : badgesCriteriaDetails) {
+			for(OpenBadgeCriteriaBean innerElement : badgesCriteriaList) {
+				if(innerElement.getCriteriaId() == outerElement.getCriteriaId()) {
+					outerElement.setBadgeId(innerElement.getBadgeId());
+				}
+			}
+		}
+		
+		return badgesCriteriaDetails;
 	}
 }
