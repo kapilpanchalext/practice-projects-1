@@ -124,7 +124,7 @@ public class PDFController {
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
-	    return ResponseEntity.status(HttpStatus.OK).body("Hello World");
+	    return ResponseEntity.status(HttpStatus.OK).body("Successful!");
 	}
 	
 	private List<String> wrapText(String text, PDFont font, float fontSize, float maxWidth) throws IOException {
