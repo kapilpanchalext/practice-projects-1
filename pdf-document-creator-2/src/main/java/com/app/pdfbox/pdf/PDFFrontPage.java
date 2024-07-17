@@ -219,7 +219,6 @@ public class PDFFrontPage {
         // Replace the day of month without suffix with the one with suffix
         return formattedDate.replaceFirst(day, day + suffix);
     }
-	
 
     private static String getDayOfMonthSuffix(int day) {
         if (day >= 11 && day <= 13) {
@@ -232,5 +231,4 @@ public class PDFFrontPage {
             default: return "th";
         }
     }
-    
 }
