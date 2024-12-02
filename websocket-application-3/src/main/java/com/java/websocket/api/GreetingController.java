@@ -26,7 +26,7 @@ public class GreetingController {
 	
 	@Autowired
 	private final SimpMessagingTemplate template;
-	private int counter = 0; // Counter for messages
+	private int counter = 0;
 
 //	@MessageMapping("/hello")
 //	@SendTo("/topic/greetings")
@@ -54,21 +54,21 @@ public class GreetingController {
 //	public TextMessageDTO broadcastMessage(@Payload TextMessageDTO textMessageDTO) {
 //		return textMessageDTO;
 //	}
-	
-	@MessageMapping("/hello")
-	@SendTo("/topic/greetings")
-	public TextMessageDTO broadcastMessage(@Payload TextMessageDTO textMessageDTO) {
-		System.err.println("1 Message received in /send: " + textMessageDTO);
-	    template.convertAndSend("/topic/greetings", textMessageDTO);
-	    System.err.println("1 Message sent to /topic/greetings");
-		return textMessageDTO;
-	}
-	
+//	
+//	@MessageMapping("/hello")
+//	@SendTo("/topic/greetings")
+//	public TextMessageDTO broadcastMessage(@Payload TextMessageDTO textMessageDTO) {
+//		System.err.println("1 Message received in /send: " + textMessageDTO);
+//	    template.convertAndSend("/topic/greetings", textMessageDTO);
+//	    System.err.println("1 Message sent to /topic/greetings");
+//		return textMessageDTO;
+//	}
+//	
 	// Method to publish "HelloWorld" message every 1 second
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 1000)
     public void publishPeriodicMessages() {
         TextMessageDTO message = new TextMessageDTO();
-        message.setMessage("HelloWorld: " + (++counter));
+        message.setMessage(String.valueOf(++counter));
         System.err.println("Publishing periodic message: " + message);
         template.convertAndSend("/topic/greetings", message);
     }
