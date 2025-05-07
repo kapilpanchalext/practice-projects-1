@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Overlay</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Grid container for lines */
+    .grid-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none; /* Allow clicks through grid */
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 1rem); /* 1rem wide grid columns */
+      grid-template-rows: repeat(auto-fill, 1rem); /* 1rem tall grid rows */
+    }
+
+    /* Horizontal and vertical lines */
+    .grid-item {
+      border: 1px solid rgba(0, 0, 0, 0.1); /* Light grey lines */
+      box-sizing: border-box; /* Include borders in the size calculation */
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Grid container for the lines -->
+  <div class="grid-container">
+    <!-- Create a large number of grid items (divs) to form the grid pattern -->
+    <div class="grid-item"></div>
+    <!-- Repeat more divs as needed... -->
+  </div>
+
+  <button
+    style="height: 4rem;
+      background-color: '#3498db';
+      color: #434343;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 1rem">
+    Click Me
+  </button>
+  
+  </div>
+
+</body>
+</html>

@@ -1,3 +1,0 @@
-INDEX VERSION 1.131
-D:\PERSONAL_WORKSPACE\spring-jsp-project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2761186804.index
-\registration-jsp-servlet-jdbc-example\src

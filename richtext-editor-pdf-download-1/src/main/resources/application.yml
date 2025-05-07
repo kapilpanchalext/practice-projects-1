@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: richtext-editor-pdf-download-1
-
-server:
-  port: 9001

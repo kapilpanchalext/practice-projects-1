@@ -1,6 +1,0 @@
-spring:
-  application:
-    name: react-custom-hooks-1
-
-server:
-  port: 9001
