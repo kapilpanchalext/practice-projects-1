@@ -1,7 +1,5 @@
 package com.java.palindrome;
 
-import java.util.Arrays;
-
 public class Palindrome1 {
 
 	public static void main(String[] args) {
