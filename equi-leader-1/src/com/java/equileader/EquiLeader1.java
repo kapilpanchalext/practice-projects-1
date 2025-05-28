@@ -1,14 +1,20 @@
-package com.java.leader;
+package com.java.equileader;
 
 import java.util.Stack;
 
-public class Leader1 {
+public class EquiLeader1 {
 
 	public static void main(String[] args) {
+		System.out.println("Equi Leader - 1");
+
 		final int[] A = {3, 4, 3, 2, 3, -1, 3, 3};
 
+		int result = getLeader(A);
+		System.err.println(result);
+	}
+
+	private static int getLeader(int[] A) {
 		Stack<Integer> stack = new Stack<>();
-		int result = 0;
     // Phase 1: Push/pop to find a candidate
     for(int num : A) {
         if (stack.isEmpty()) {
@@ -36,21 +42,10 @@ public class Leader1 {
     }
 
     if (count > A.length / 2) {
-//        return candidate;
-    	for(int i=0; i<A.length; i++) {
-    		if(A[i] == candidate) {
-//    			return i;
-    			result = i;
-    		}
-    	}
-        result = candidate;
-        System.err.println(result);
+        return candidate;
     }
 
-//    return -1; // No leader
-    result = -1;
-
-    System.err.println(result);
+    return candidate; // No leader
 	}
 
 }
