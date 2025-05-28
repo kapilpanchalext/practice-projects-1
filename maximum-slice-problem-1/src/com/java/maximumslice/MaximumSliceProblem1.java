@@ -15,8 +15,12 @@ public class MaximumSliceProblem1 {
 		int maxSlice = A[0];
 		
 		for (int i = 1; i < A.length; i++) {
+
+			System.err.print("MaxEnding: " + A[i] + " : " + (maxEnding + A[i]) + " = ");
       maxEnding = Math.max(A[i], maxEnding + A[i]);
+      System.err.println(maxEnding);
       maxSlice = Math.max(maxSlice, maxEnding);
+      System.err.println("MaxSlice: " + maxSlice);
 		}
 
 		System.err.println(maxSlice);
