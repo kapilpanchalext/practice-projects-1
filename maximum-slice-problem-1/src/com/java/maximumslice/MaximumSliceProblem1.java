@@ -7,7 +7,8 @@ public class MaximumSliceProblem1 {
 	public static void main(String[] args) {
 		System.out.println("Maximum Slice Problem!");
 		
-		int[] A = {5, -7, 3, 5, -2, 4, -1};
+//		int[] A = {5, -7, 3, 5, -2, 4, -1};
+		int[] A = {3, 2, -6, 4, 0};
 		
 		System.out.println(Arrays.toString(A));
 		
